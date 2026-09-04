@@ -1,0 +1,171 @@
+/* ==========================================================================
+   BASE & UTILITY STYLES
+   ========================================================================== */
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-navy-800);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3.25rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.45rem); }
+h4 { font-size: 1.1rem; }
+
+p {
+  color: var(--color-slate-600);
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(0.75rem, 3vw, 1.5rem);
+  padding-right: clamp(0.75rem, 3vw, 1.5rem);
+  box-sizing: border-box;
+}
+
+/* Utility Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-primary {
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-600);
+}
+
+.badge-orange {
+  background-color: var(--color-orange-100);
+  color: var(--color-orange-600);
+}
+
+.badge-dark {
+  background-color: var(--color-navy-800);
+  color: var(--color-white);
+}
+
+.badge-outline {
+  border: 1px solid var(--color-slate-300);
+  color: var(--color-slate-700);
+  background-color: var(--color-white);
+}
+
+/* Common Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.925rem;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-blue-700);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.35);
+}
+
+.btn-cta {
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.25);
+}
+
+.btn-cta:hover {
+  background-color: var(--color-blue-700);
+  transform: translateY(-1px);
+}
+
+.btn-orange {
+  background-color: var(--color-orange-500);
+  color: var(--color-white);
+  box-shadow: 0 3px 10px rgba(242, 101, 34, 0.3);
+}
+
+.btn-orange:hover {
+  background-color: var(--color-orange-600);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(242, 101, 34, 0.4);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--color-slate-300);
+  background-color: var(--color-white);
+  color: var(--color-slate-700);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-blue-600);
+  color: var(--color-blue-600);
+  background-color: var(--color-blue-50);
+}
+
+.btn-sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.btn-lg {
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+/* Accessibility & Focus States */
+:focus-visible {
+  outline: 2px solid var(--color-blue-600);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-slate-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-300);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate-400);
+}

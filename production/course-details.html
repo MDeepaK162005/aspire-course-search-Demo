@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details | Aspire Rise Ventures Portal</title>
+  <meta name="description" content="Detailed course information, entry eligibility requirements, tuition fees, and university rankings for Irish higher education programmes.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Modular CSS Files -->
+  <link rel="icon" type="image/png" href="assets/logo/aspire-logo.png">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/details.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/cursor.css">
+
+  <!-- Supabase JS Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <!-- TOP INFO BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <span class="top-bar-call-badge">CALL</span>
+          Consult With IT Advisor? <a href="https://aspireriseventures.com/contact/" target="_blank" class="top-bar-link">Click Now</a>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item top-bar-item-hide-mobile">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          51 Bracken Road, Dublin D18, CV48, Ireland
+        </span>
+        <span class="top-bar-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          info@aspireriseventures.com
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER -->
+  <div class="site-header-wrapper">
+    <header class="site-header" id="site-header">
+      <div class="container header-container">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" id="header-brand-logo">
+          <img src="assets/logo/aspire-logo.png" alt="Aspire Rise Ventures Limited" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-text">Home</span>
+          </a>
+          <a href="https://aspireriseventures.com/about-us/" target="_blank" class="nav-link">
+            <span class="nav-link-text">About Us</span>
+          </a>
+          <a href="index.html#hero-section" class="nav-link">
+            <span class="nav-link-text">Study In Ireland</span>
+            <svg class="nav-dropdown-icon" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="https://aspireriseventures.com/services/" target="_blank" class="nav-link">
+            <span class="nav-link-text">Services</span>
+            <svg class="nav-dropdown-icon" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="https://aspireriseventures.com/contact/" target="_blank" class="nav-link">
+            <span class="nav-link-text">Contact Us</span>
+          </a>
+          <a href="index.html#search-results-section" class="nav-link">
+            <span class="nav-link-text">Universities</span>
+            <svg class="nav-dropdown-icon" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="https://aspireriseventures.com/university-search/" target="_blank" class="btn-book-consultation">
+            Book Consultation
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <button class="hamburger-toggle" id="hamburger-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Mobile Nav Overlay & Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="https://aspireriseventures.com/about-us/" target="_blank" class="nav-link">About Us</a>
+    <a href="index.html#search-results-section" class="nav-link">Universities & Courses</a>
+    <a href="https://aspireriseventures.com/contact/" target="_blank" class="nav-link">Contact Us</a>
+    <a href="https://aspireriseventures.com/university-search/" target="_blank" class="btn btn-orange" style="margin-top: 1rem;">Book Consultation</a>
+  </aside>
+
+  <!-- COURSE DETAILS HERO -->
+  <section class="details-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <a href="index.html#search-results-section">Courses</a>
+        <span>&rsaquo;</span>
+        <span id="breadcrumb-course-title">Loading Programme...</span>
+      </nav>
+
+      <div class="details-hero-content">
+        <div class="details-institution" id="details-institution-name">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+          Loading Institution...
+        </div>
+
+        <h1 class="details-course-title" id="details-course-title">Loading Degree Programme...</h1>
+
+        <div class="details-hero-tags" id="details-hero-tags">
+          <span class="badge badge-primary">Qualification</span>
+          <span class="badge badge-orange">NFQ Level</span>
+        </div>
+
+        <div class="details-action-bar">
+          <a href="https://aspireriseventures.com/university-search/" target="_blank" class="btn-apply-hero">
+            Apply Now with Aspire Rise
+          </a>
+          <a href="https://aspireriseventures.com/contact/" target="_blank" class="btn-advisor-hero">
+            Speak to an Advisor
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="btn btn-outline" id="official-course-link" style="color: white; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.15);">
+            Official Website &nearr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS SUMMARY CARDS -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-label">Tuition Fee</span>
+          <span class="metric-value" id="metric-fee">N/A</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">NFQ Framework</span>
+          <span class="metric-value" id="metric-nfq">N/A</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Study Mode</span>
+          <span class="metric-value" id="metric-mode">N/A</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Duration</span>
+          <span class="metric-value" id="metric-duration">N/A</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">IELTS Min Score</span>
+          <span class="metric-value" id="metric-ielts">N/A</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">TOEFL Score</span>
+          <span class="metric-value" id="metric-toefl">N/A</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN DETAILS & TABBED CONTENT -->
+  <main class="container">
+    <div class="details-main-layout">
+
+      <!-- LEFT TABBED INFORMATION & ACCORDIONS -->
+      <div class="tabs-container">
+        <!-- Tab Navigation Buttons -->
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="tab-course-info">Course Information</button>
+          <button class="tab-btn" data-tab="tab-eligibility">Eligibility & Admission</button>
+        </div>
+
+        <!-- TAB 1: COURSE INFO -->
+        <div class="tab-content active" id="tab-course-info">
+          <div class="info-block">
+            <h3 class="info-block-title">Programme Overview & Specifications</h3>
+            <div class="kv-grid">
+              <div class="kv-item">
+                <span class="kv-label">Programme Name</span>
+                <span class="kv-value" id="info-course-name">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">Qualification Award</span>
+                <span class="kv-value" id="info-qualification">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">National Framework (NFQ)</span>
+                <span class="kv-value" id="info-nfq">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">Academic Subject</span>
+                <span class="kv-value" id="info-subject">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">Level Category</span>
+                <span class="kv-value" id="info-level">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">Study Mode</span>
+                <span class="kv-value" id="info-mode">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">Programme Duration</span>
+                <span class="kv-value" id="info-duration">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">Course Code</span>
+                <span class="kv-value" id="info-code">N/A</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION SECTIONS FOR UNIVERSITY INFORMATION -->
+          <div class="accordion-wrapper" style="margin-top: 1rem;">
+            <h3 style="font-size: 1.2rem; color: var(--color-navy-800); margin-bottom: 0.5rem;">University & Campus Details</h3>
+
+            <div class="accordion-item active">
+              <button class="accordion-trigger">
+                <span>About the Institution</span>
+                <svg class="accordion-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p id="accord-about-uni">Loading university overview...</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                <span>Reputation & Global Rankings</span>
+                <svg class="accordion-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p id="accord-reputation">Loading ranking metrics...</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                <span>Scholarships & Financial Support</span>
+                <svg class="accordion-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p id="accord-scholarships">Loading scholarship details...</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                <span>Accommodation & Student Facilities</span>
+                <svg class="accordion-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p id="accord-accommodation">Loading accommodation options...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: ELIGIBILITY INFO -->
+        <div class="tab-content" id="tab-eligibility">
+          <div class="info-block">
+            <h3 class="info-block-title">Entry & Language Requirements</h3>
+            <div class="kv-grid">
+              <div class="kv-item">
+                <span class="kv-label">IELTS Requirement</span>
+                <span class="kv-value" id="eligibility-ielts">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">TOEFL iBT Requirement</span>
+                <span class="kv-value" id="eligibility-toefl">N/A</span>
+              </div>
+              <div class="kv-item">
+                <span class="kv-label">PTE Academic Requirement</span>
+                <span class="kv-value" id="eligibility-pte">N/A</span>
+              </div>
+              <div class="kv-item" style="grid-column: span 2;">
+                <span class="kv-label">Academic Qualifications</span>
+                <span class="kv-value" id="eligibility-academic">N/A</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-wrapper" style="margin-top: 1rem;">
+            <div class="accordion-item active">
+              <button class="accordion-trigger">
+                <span>International Application Process</span>
+                <svg class="accordion-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p id="accord-admissions">Loading international admission instructions...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR RANKINGS & METRICS -->
+      <aside class="ranking-sidebar-card">
+        <h3 style="font-size: 1.15rem; color: var(--color-navy-800); margin-bottom: 0.5rem;">University Snapshot</h3>
+
+        <div class="ranking-badge-item">
+          <span class="ranking-title">QS World Ranking</span>
+          <span class="ranking-val" id="qs-ranking-val">N/A</span>
+        </div>
+
+        <div class="ranking-badge-item">
+          <span class="ranking-title">THE Ranking</span>
+          <span class="ranking-val" id="the-ranking-val">N/A</span>
+        </div>
+
+        <div class="ranking-badge-item">
+          <span class="ranking-title">Founded Year</span>
+          <span class="ranking-val" id="est-year-val">N/A</span>
+        </div>
+
+        <div class="ranking-badge-item">
+          <span class="ranking-title">Campus Location</span>
+          <span class="ranking-val" id="location-val">Ireland</span>
+        </div>
+
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-slate-200);">
+          <a href="https://aspireriseventures.com/university-search/" target="_blank" class="btn btn-orange" style="width: 100%;">
+            Get Free Counselling
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem; display: inline-block;">
+            <img src="assets/logo/aspire-logo.png" alt="Aspire Rise Ventures Limited" class="footer-logo-img" style="height: 42px; width: auto; background: white; padding: 4px 10px; border-radius: 6px;">
+          </a>
+          <p>Aspire Rise Ventures is your premier international education advisory partner, connecting students to top higher education institutions across Ireland.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Course Search Portal</a>
+            <a href="index.html#search-results-section">All Irish Universities</a>
+            <a href="https://aspireriseventures.com/contact/" target="_blank">Contact Advisor</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Study Destinations</h4>
+          <div class="footer-links">
+            <a href="index.html">Study in Ireland</a>
+            <a href="index.html">Dublin Higher Education</a>
+            <a href="index.html">Cork & Galway Institutions</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Admissions</h4>
+          <div class="footer-links">
+            <a href="https://aspireriseventures.com/university-search/" target="_blank">Free Application Consultation</a>
+            <a href="#">Visa & Accommodation Guide</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aspire Rise Ventures. All Rights Reserved.</p>
+        <p>Irish University & Course Search Portal</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modular Application JavaScript Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/mockData.js"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/courses.js"></script>
+  <script src="js/course-details.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+/* ==========================================================================
+   RESPONSIVE LAYOUT & BREAKPOINTS (320px up to 1920px)
+   ========================================================================== */
+
+/* Layout & Grid Breaks */
+.main-portal-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.results-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--color-slate-200);
+}
+
+.results-count-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.results-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-navy-800);
+}
+
+.results-count-badge {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-blue-700);
+}
+
+.results-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-filter-trigger {
+  display: none;
+}
+
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-slate-700);
+}
+
+.sort-select {
+  height: 38px;
+  padding: 0 2rem 0 0.75rem;
+  border: 1.5px solid var(--color-slate-300);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-slate-800);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748B'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 14px;
+  cursor: pointer;
+}
+
+/* Footer Layout */
+.site-footer {
+  background-color: var(--color-navy-800);
+  color: var(--color-white);
+  padding: 4rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-brand p {
+  color: var(--color-slate-400);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-col-title {
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--color-slate-300);
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-orange-500);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  color: var(--color-slate-400);
+}
+
+/* ==========================================================================
+   BREAKPOINTS
+   ========================================================================== */
+
+/* Large Desktop (1440px and above) */
+@media (min-width: 1440px) {
+  .search-fields-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Standard Desktop / Laptop (1025px to 1439px) */
+@media (max-width: 1280px) {
+  .search-fields-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .main-nav {
+    gap: 1.1rem;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablet Landscape & Small Laptop (992px to 1024px) */
+@media (max-width: 1024px) {
+  .search-fields-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-portal-layout {
+    grid-template-columns: 240px 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .details-main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    gap: 0.85rem;
+  }
+
+  .nav-link {
+    font-size: 0.825rem;
+  }
+}
+
+/* Switch to Mobile Navigation Drawer at <= 991px for clean UI */
+@media (max-width: 991px) {
+  .top-bar-left, .top-bar-right {
+    gap: 0.85rem;
+  }
+
+  .top-bar-item-hide-mobile {
+    display: none;
+  }
+
+  .main-nav {
+    display: none !important;
+  }
+
+  .hamburger-toggle {
+    display: flex;
+  }
+
+  .main-portal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .desktop-filter-sidebar {
+    display: none;
+  }
+
+  .mobile-filter-trigger {
+    display: inline-flex;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+
+/* Mobile Devices (320px to 767px) */
+@media (max-width: 767px) {
+  .top-bar {
+    display: none;
+  }
+
+  .site-header {
+    height: 64px;
+  }
+
+  .site-header.scrolled {
+    height: 58px;
+  }
+
+  .logo-title {
+    font-size: 1rem;
+  }
+
+  .logo-subtext {
+    font-size: 0.6rem;
+  }
+
+  .logo-icon-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-book-consultation {
+    height: 36px;
+    padding: 0 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-section {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-search-card {
+    padding: 1.25rem;
+  }
+
+  .quick-chips-wrapper {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .search-fields-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .search-actions-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-search-main, .btn-reset-main {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .results-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .results-controls-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

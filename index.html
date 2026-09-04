@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irish University & Course Search Portal | Aspire Rise Ventures</title>
+  <meta name="description" content="Find and compare verified undergraduate, postgraduate, and doctoral degree programmes across top Irish universities and colleges with Aspire Rise Ventures.">
+  <meta name="keywords" content="Ireland Study Portal, Irish University Search, Ireland Courses 2026, Aspire Rise Ventures, Trinity College Dublin, UCD, University of Galway, Study in Ireland">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Modular CSS Files -->
+  <link rel="icon" type="image/png" href="assets/logo/aspire-logo.png">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/details.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/cursor.css">
+
+  <!-- Supabase JS Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <!-- TOP INFO BAR (Matching Reference Screenshot 1 & 2) -->
+  <div class="top-bar">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <span class="top-bar-call-badge">CALL</span>
+          Consult With IT Advisor? <a href="https://aspireriseventures.com/contact/" target="_blank" class="top-bar-link">Click Now</a>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item top-bar-item-hide-mobile">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          51 Bracken Road, Dublin D18, CV48, Ireland
+        </span>
+        <span class="top-bar-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          info@aspireriseventures.com
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER (Matching Reference Screenshot 1 & 2) -->
+  <div class="site-header-wrapper">
+    <header class="site-header" id="site-header">
+      <div class="container header-container">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" id="header-brand-logo">
+          <img src="assets/logo/aspire-logo.png" alt="Aspire Rise Ventures Limited" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html" class="nav-link active" id="nav-home">
+            <span class="nav-link-text">Home</span>
+          </a>
+          <a href="https://aspireriseventures.com/about-us/" target="_blank" class="nav-link">
+            <span class="nav-link-text">About Us</span>
+          </a>
+          <a href="#hero-section" class="nav-link">
+            <span class="nav-link-text">Study In Ireland</span>
+            <svg class="nav-dropdown-icon" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="https://aspireriseventures.com/services/" target="_blank" class="nav-link">
+            <span class="nav-link-text">Services</span>
+            <svg class="nav-dropdown-icon" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="https://aspireriseventures.com/contact/" target="_blank" class="nav-link" id="nav-contact">
+            <span class="nav-link-text">Contact Us</span>
+          </a>
+          <a href="#search-results-section" class="nav-link" id="nav-universities">
+            <span class="nav-link-text">Universities</span>
+            <svg class="nav-dropdown-icon" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </nav>
+
+        <!-- Right Header Action Button -->
+        <div class="header-actions">
+          <a href="https://aspireriseventures.com/university-search/" target="_blank" class="btn-book-consultation" id="header-cta-btn">
+            Book Consultation
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <button class="hamburger-toggle" id="hamburger-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Mobile Nav Overlay & Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="https://aspireriseventures.com/about-us/" target="_blank" class="nav-link">About Us</a>
+    <a href="#hero-section" class="nav-link">Study In Ireland</a>
+    <a href="#search-results-section" class="nav-link">Universities & Courses</a>
+    <a href="https://aspireriseventures.com/contact/" target="_blank" class="nav-link">Contact Us</a>
+    <a href="https://aspireriseventures.com/university-search/" target="_blank" class="btn btn-orange" style="margin-top: 1rem;">Book Consultation</a>
+  </aside>
+
+  <!-- HERO SECTION WITH EMBEDDED SEARCH CARD (Matching Reference Screenshot 3) -->
+  <section class="hero-section" id="hero-section">
+    <div class="hero-bg-shapes">
+      <div class="hero-shape-1"></div>
+      <div class="hero-shape-2"></div>
+    </div>
+
+    <div class="container hero-content">
+      <span class="hero-eyebrow">STUDY IN IRELAND</span>
+      <h1 class="hero-title">Irish Course Search Portal</h1>
+      <p class="hero-subtitle">Find Your Dream Course | Search Individual Courses Across Irish Universities</p>
+
+      <!-- EMBEDDED WHITE SEARCH PANEL CARD (Reference Screenshot 3 Layout) -->
+      <div class="hero-search-card fade-up">
+        <!-- Quick Search Filter Chips -->
+        <div class="quick-chips-wrapper" id="quick-filter-chips">
+          <button class="chip-btn active" data-type="all" data-value="all" id="chip-all">All Courses</button>
+          <button class="chip-btn" data-type="level" data-value="UG" id="chip-ug">Undergraduate</button>
+          <button class="chip-btn" data-type="level" data-value="PG" id="chip-pg">Postgraduate</button>
+          <button class="chip-btn" data-type="subject" data-value="Engineering" id="chip-eng">Engineering</button>
+          <button class="chip-btn" data-type="subject" data-value="Business" id="chip-biz">Business</button>
+          <button class="chip-btn" data-type="subject" data-value="Computer Science" id="chip-cs">Computer Science</button>
+          <button class="chip-btn" data-type="subject" data-value="Medicine" id="chip-med">Medicine</button>
+          <button class="chip-btn chip-btn-orange" data-type="fee" data-value="affordable" id="chip-afford">Affordable (Under €15K)</button>
+        </div>
+
+        <!-- Search Fields Form Grid (8 Input Controls) -->
+        <form id="hero-search-form">
+          <div class="search-fields-grid">
+            <!-- 1. Course Level -->
+            <div class="search-field-group">
+              <label class="search-field-label" for="hero-level-select">Course Level</label>
+              <select id="hero-level-select" class="search-select">
+                <option value="">All Levels</option>
+                <option value="UG">Undergraduate (UG)</option>
+                <option value="PG">Postgraduate (PG)</option>
+                <option value="PhD">PhD / Doctorate</option>
+              </select>
+            </div>
+
+            <!-- 2. Field of Study -->
+            <div class="search-field-group">
+              <label class="search-field-label" for="hero-subject-select">Field of Study</label>
+              <select id="hero-subject-select" class="search-select">
+                <option value="">All Fields</option>
+              </select>
+            </div>
+
+            <!-- 3. University -->
+            <div class="search-field-group">
+              <label class="search-field-label" for="hero-institution-select">University</label>
+              <select id="hero-institution-select" class="search-select">
+                <option value="">All Universities</option>
+              </select>
+            </div>
+
+            <!-- 4. Duration -->
+            <div class="search-field-group">
+              <label class="search-field-label" for="hero-duration-select">Duration</label>
+              <select id="hero-duration-select" class="search-select">
+                <option value="">Any Duration</option>
+                <option value="1 Year">1 Year</option>
+                <option value="2 Years">2 Years</option>
+                <option value="3 Years">3 Years</option>
+                <option value="4 Years">4 Years</option>
+              </select>
+            </div>
+
+            <!-- 5. EU Annual Fees (EUR) -->
+            <div class="search-field-group">
+              <label class="search-field-label">EU Annual Fees (EUR)</label>
+              <div class="fee-range-inputs">
+                <input type="number" id="eu-fee-min" class="search-input" placeholder="Min (€)">
+                <input type="number" id="eu-fee-max" class="search-input" placeholder="Max (€)">
+              </div>
+            </div>
+
+            <!-- 6. Non-EU Annual Fees (EUR) -->
+            <div class="search-field-group">
+              <label class="search-field-label">Non-EU Annual Fees (EUR)</label>
+              <div class="fee-range-inputs">
+                <input type="number" id="noneu-fee-min" class="search-input" placeholder="Min (€)">
+                <input type="number" id="noneu-fee-max" class="search-input" placeholder="Max (€)">
+              </div>
+            </div>
+
+            <!-- 7. IELTS Requirement -->
+            <div class="search-field-group">
+              <label class="search-field-label" for="hero-ielts-select">IELTS Requirement</label>
+              <select id="hero-ielts-select" class="search-select">
+                <option value="">Any Score</option>
+                <option value="6.0">IELTS 6.0+</option>
+                <option value="6.5">IELTS 6.5+</option>
+                <option value="7.0">IELTS 7.0+</option>
+              </select>
+            </div>
+
+            <!-- 8. Search Keyword -->
+            <div class="search-field-group">
+              <label class="search-field-label" for="hero-keyword-input">Search Courses</label>
+              <input type="text" id="hero-keyword-input" class="search-input" placeholder="Enter course name...">
+            </div>
+
+            <!-- Form Action Bar -->
+            <div class="search-actions-bar">
+              <button type="button" id="btn-reset-hero" class="btn-reset-main">Reset Filters</button>
+              <button type="submit" id="hero-search-btn" class="btn-search-main">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                Search Courses
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN SEARCH RESULTS SECTION (TWO COLUMN LAYOUT) -->
+  <main class="container" id="search-results-section">
+    <div class="main-portal-layout">
+
+      <!-- LEFT ACCORDION FILTER SIDEBAR -->
+      <aside class="filter-sidebar desktop-filter-sidebar" id="desktop-filter-sidebar">
+        <div class="filter-header">
+          <h3 class="filter-header-title">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            Filter Courses
+          </h3>
+          <button class="btn-clear-filters" id="sidebar-clear-btn">Clear All</button>
+        </div>
+
+        <!-- Keyword Search -->
+        <div class="filter-group">
+          <label class="filter-label" for="filter-search-input">Search Keyword</label>
+          <input type="text" id="filter-search-input" class="filter-search-input" placeholder="Search course or institution...">
+        </div>
+
+        <!-- Accordion Section: Universities -->
+        <div class="filter-group">
+          <label class="filter-label" for="filter-institution-select">University / Institution</label>
+          <select id="filter-institution-select" class="filter-select-input">
+            <option value="">All Universities</option>
+          </select>
+        </div>
+
+        <!-- Accordion Section: Field of Study -->
+        <div class="filter-group">
+          <label class="filter-label" for="filter-subject-select">Field of Study</label>
+          <select id="filter-subject-select" class="filter-select-input">
+            <option value="">All Fields</option>
+          </select>
+        </div>
+
+        <!-- Accordion Section: Course Level -->
+        <div class="filter-group">
+          <label class="filter-label" for="filter-level-select">Course Level</label>
+          <select id="filter-level-select" class="filter-select-input">
+            <option value="">All Levels</option>
+            <option value="UG">Undergraduate (UG)</option>
+            <option value="PG">Postgraduate (PG)</option>
+            <option value="PhD">PhD / Doctorate</option>
+          </select>
+        </div>
+
+        <!-- Accordion Section: Study Mode -->
+        <div class="filter-group">
+          <label class="filter-label" for="filter-mode-select">Study Mode</label>
+          <select id="filter-mode-select" class="filter-select-input">
+            <option value="">All Study Modes</option>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+          </select>
+        </div>
+
+        <!-- Accordion Section: NFQ Level -->
+        <div class="filter-group">
+          <label class="filter-label" for="filter-nfq-select">NFQ Level Framework</label>
+          <select id="filter-nfq-select" class="filter-select-input">
+            <option value="">All NFQ Levels</option>
+            <option value="8">Level 8 (Honours Bachelor)</option>
+            <option value="9">Level 9 (Master / PG Dip)</option>
+            <option value="10">Level 10 (Doctoral)</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- RIGHT RESULTS GRID AREA -->
+      <section class="results-main-area">
+        <!-- Top Results Bar -->
+        <div class="results-header-row">
+          <div class="results-count-title">
+            <h2 class="results-heading">Search Results</h2>
+            <span class="results-count-badge" id="results-count">Loading courses...</span>
+          </div>
+
+          <div class="results-controls-right">
+            <!-- Mobile Filter Trigger -->
+            <button class="btn btn-outline btn-sm mobile-filter-trigger" id="mobile-filter-trigger">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+              Filters
+            </button>
+
+            <!-- Sorting Select -->
+            <div class="sort-wrapper">
+              <label for="sort-select">Sort By:</label>
+              <select id="sort-select" class="sort-select">
+                <option value="relevance">Relevance</option>
+                <option value="name">Course Name (A-Z)</option>
+                <option value="university">University (A-Z)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Cards Grid -->
+        <div class="courses-grid" id="courses-grid">
+          <!-- Populated by courses.js -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination-container" id="pagination-container">
+          <!-- Populated by courses.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- MOBILE SLIDE-IN FILTER DRAWER -->
+  <div class="mobile-filter-overlay" id="mobile-filter-overlay"></div>
+  <div class="mobile-filter-drawer" id="mobile-filter-drawer">
+    <div class="filter-header">
+      <h3 class="filter-header-title">Filter Courses</h3>
+      <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+    </div>
+
+    <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
+      <div class="filter-group">
+        <label class="filter-label">Search Keyword</label>
+        <input type="text" id="mobile-search-input" class="filter-search-input" placeholder="Search course or institution...">
+      </div>
+      <button class="btn btn-orange" id="mobile-apply-btn" onclick="document.querySelector('#mobile-filter-overlay').click()">Apply Filters</button>
+      <button class="btn btn-outline btn-clear-filters">Clear All Filters</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem; display: inline-block;">
+            <img src="assets/logo/aspire-logo.png" alt="Aspire Rise Ventures Limited" class="footer-logo-img" style="height: 42px; width: auto; background: white; padding: 4px 10px; border-radius: 6px;">
+          </a>
+          <p>Aspire Rise Ventures is your premier international education advisory partner, connecting students to top higher education institutions across Ireland.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Study Destinations</h4>
+          <div class="footer-links">
+            <a href="#">Study in Ireland</a>
+            <a href="#">Dublin Universities</a>
+            <a href="#">Cork & Galway Colleges</a>
+            <a href="#">Technological Universities</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Popular Fields</h4>
+          <div class="footer-links">
+            <a href="#">Computer Science & AI</a>
+            <a href="#">Data Analytics</a>
+            <a href="#">Business & Management</a>
+            <a href="#">Engineering & Tech</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact & Support</h4>
+          <div class="footer-links">
+            <a href="https://aspireriseventures.com/" target="_blank">Official Website</a>
+            <a href="https://aspireriseventures.com/contact/" target="_blank">Contact Advisory Team</a>
+            <a href="https://aspireriseventures.com/university-search/" target="_blank">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aspire Rise Ventures. All Rights Reserved. Data verified against official HEA framework.</p>
+        <p>Irish University & Course Search Portal v2.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modular Application JavaScript Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/mockData.js"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/courses.js"></script>
+  <script src="js/course-details.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>
