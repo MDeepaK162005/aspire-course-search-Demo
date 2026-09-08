@@ -1,6 +1,6 @@
 /**
  * Aspire Rise Ventures - Hero Search & Quick Filter Chips Handler
- * Manages 8 Hero Search Panel Fields & Quick Filter Chips
+ * Manages 8 Hero Search Panel Fields & Quick Filter Chips independently
  */
 
 window.SEARCH = {
@@ -35,6 +35,7 @@ window.SEARCH = {
     const level = document.querySelector('#hero-level-select')?.value || '';
     const subject = document.querySelector('#hero-subject-select')?.value || '';
     const institution = document.querySelector('#hero-institution-select')?.value || '';
+    const duration = document.querySelector('#hero-duration-select')?.value || '';
     const keyword = document.querySelector('#hero-keyword-input')?.value || '';
 
     // Update global filter state
@@ -42,9 +43,11 @@ window.SEARCH = {
       window.FILTERS.currentFilters.level = level;
       window.FILTERS.currentFilters.subject = subject;
       window.FILTERS.currentFilters.institution = institution;
+      window.FILTERS.currentFilters.duration = duration;
       window.FILTERS.currentFilters.search = keyword;
       window.FILTERS.currentFilters.page = 1;
 
+      window.FILTERS.syncControlsUI();
       window.FILTERS.syncUrlParams();
       window.FILTERS.notify();
     }
@@ -64,17 +67,9 @@ window.SEARCH = {
     if (!resetBtn) return;
 
     resetBtn.addEventListener('click', () => {
-      const form = document.querySelector('#hero-search-form');
-      if (form) form.reset();
-
       if (window.FILTERS) {
         window.FILTERS.clearAll();
       }
-
-      const chips = document.querySelectorAll('.chip-btn');
-      chips.forEach(c => c.classList.remove('active'));
-      const allChip = document.querySelector('#chip-all');
-      if (allChip) allChip.classList.add('active');
     });
   },
 
@@ -86,7 +81,8 @@ window.SEARCH = {
     if (!chips.length) return;
 
     chips.forEach(chip => {
-      chip.addEventListener('click', () => {
+      chip.addEventListener('click', (e) => {
+        e.preventDefault();
         chips.forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
 
@@ -111,3 +107,4 @@ window.SEARCH = {
     });
   }
 };
+

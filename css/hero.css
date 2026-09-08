@@ -5,8 +5,14 @@
 
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, #6B86E8 0%, #506ECB 100%);
-  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(2.5rem, 6vw, 4.5rem);
+  background-color: #1E40AF;
+  background-image: 
+    linear-gradient(135deg, rgba(15, 45, 120, 0.50) 0%, rgba(30, 64, 175, 0.35) 50%, rgba(29, 78, 216, 0.25) 100%),
+    url('../assets/images/Background_image.png');
+  background-position: center 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(3rem, 6vw, 5rem);
   color: var(--color-white);
   overflow: hidden;
 }
@@ -24,7 +30,7 @@
   right: -50px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
 }
 
@@ -34,7 +40,7 @@
   left: -50px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
 }
 

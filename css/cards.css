@@ -15,7 +15,7 @@
   background-color: var(--color-white);
   border: 1px solid var(--color-slate-200);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,12 +33,71 @@
   border-color: var(--color-blue-600);
 }
 
+/* Card Media / Image Section */
+.course-card-media {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background-color: var(--color-slate-100);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.course-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.course-card:hover .course-card-img {
+  transform: scale(1.05);
+}
+
+.course-card-media-overlay {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.course-media-pill {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 0.725rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Card Body Section */
+.course-card-body {
+  padding: 1.25rem 1.25rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* Card Header Section */
 .course-card-header {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .course-title {
@@ -153,7 +212,7 @@
   justify-content: space-between;
   gap: 0.75rem;
   margin-top: auto;
-  padding-top: 0.75rem;
+  padding: 0.75rem 1.25rem 1.25rem;
   border-top: 1px solid var(--color-slate-100);
   width: 100%;
   box-sizing: border-box;

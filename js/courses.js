@@ -70,7 +70,7 @@ window.COURSES = {
   },
 
   /**
-   * Render Course Cards Grid with full metadata & bookmark action
+   * Render Course Cards Grid with image media banner & full metadata
    */
   renderGrid(courses) {
     let html = '';
@@ -92,44 +92,67 @@ window.COURSES = {
       const fee = this.formatValue(course.fee || course.institution?.international_tuition_fee, '€12,500 - €18,500');
       const englishReq = this.formatValue(course.ielts || course.requirements?.ielts_overall, 'IELTS 6.5');
 
+      // Resolve relevant course / university image
+      const courseImgUrl = window.API?.getCourseImage ? window.API.getCourseImage(course) : 'assets/images/placeholder.svg';
+
       html += `
         <article class="course-card stagger-item" style="animation-delay: ${index * 0.05}s">
-          <div class="course-card-header">
-            <h3 class="course-title">
-              <a href="course-details.html?id=${course.id}">${courseName}</a>
-            </h3>
-
-            <div class="institution-meta-row">
-              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-              <span>${instName}</span>
-              <span class="location-badge">&bull; ${location}</span>
-            </div>
-
-            <div class="card-tags-row">
-              <span class="tag-badge tag-badge-primary">${levelBadge}</span>
-              <span class="tag-badge">${qualification}</span>
-              <span class="tag-badge">Level ${nfqClean}</span>
+          <div class="course-card-media">
+            <img 
+              src="${courseImgUrl}" 
+              alt="${courseName} - ${instName}" 
+              class="course-card-img" 
+              loading="lazy"
+              onerror="this.onerror=null; this.src='assets/images/placeholder.svg';"
+            >
+            <div class="course-card-media-overlay">
+              <span class="course-media-pill" title="${instName}">
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                ${instName}
+              </span>
             </div>
           </div>
 
-          <div class="card-details-grid">
-            <div class="detail-item">
-              <span class="detail-item-label">Tuition Fee</span>
-              <span class="detail-item-value detail-item-value-highlight">${fee}</span>
+          <div class="course-card-body">
+            <div class="course-card-header">
+              <h3 class="course-title">
+                <a href="course-details.html?id=${course.id}">${courseName}</a>
+              </h3>
+
+              <div class="institution-meta-row">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span>${instName}</span>
+                <span class="location-badge">&bull; ${location}</span>
+              </div>
+
+              <div class="card-tags-row">
+                <span class="tag-badge tag-badge-primary">${levelBadge}</span>
+                <span class="tag-badge">${qualification}</span>
+                <span class="tag-badge">Level ${nfqClean}</span>
+              </div>
             </div>
-            <div class="detail-item">
-              <span class="detail-item-label">Duration</span>
-              <span class="detail-item-value">${duration}</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-item-label">Next Intake</span>
-              <span class="detail-item-value">${intake}</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-item-label">English Req.</span>
-              <span class="detail-item-value">${englishReq}</span>
+
+            <div class="card-details-grid">
+              <div class="detail-item">
+                <span class="detail-item-label">Tuition Fee</span>
+                <span class="detail-item-value detail-item-value-highlight">${fee}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item-label">Duration</span>
+                <span class="detail-item-value">${duration}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item-label">Next Intake</span>
+                <span class="detail-item-value">${intake}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item-label">English Req.</span>
+                <span class="detail-item-value">${englishReq}</span>
+              </div>
             </div>
           </div>
 

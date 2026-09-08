@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS public.institutions (
     scholarships TEXT,
     accommodation TEXT,
     additional_notes TEXT,
+    image_url TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
@@ -41,8 +42,13 @@ CREATE TABLE IF NOT EXISTS public.courses (
     duration TEXT,
     intake TEXT,
     fee TEXT,
+    image_url TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- Schema Evolution Migrations (Safe for existing live databases)
+ALTER TABLE public.institutions ADD COLUMN IF NOT EXISTS image_url TEXT;
+ALTER TABLE public.courses ADD COLUMN IF NOT EXISTS image_url TEXT;
 
 -- 3. ENABLE ROW LEVEL SECURITY (RLS) FOR PUBLIC SELECT
 ALTER TABLE public.institutions ENABLE ROW LEVEL SECURITY;

@@ -123,6 +123,22 @@ window.COURSE_DETAILS = {
     this.setText('#the-ranking-val', this.formatValue(inst.the_ranking, 'Top Ranked'));
     this.setText('#est-year-val', this.formatValue(inst.establishment_year || inst.historical_founding_year, 'Established HEI'));
     this.setText('#location-val', `${this.formatValue(inst.city, 'Ireland')}${inst.county ? ', Co. ' + inst.county : ''}`);
+
+    const instKey = inst.id || course.institution_id || course.institution_name || inst.name || instName;
+    const instImgUrl = window.API?.getInstitutionImage ? window.API.getInstitutionImage(instKey) : 'assets/images/institutions/default.jpg';
+
+    // Set University Snapshot Sidebar Image
+    const instImgEl = document.querySelector('#details-institution-img');
+    if (instImgEl) {
+      instImgEl.src = instImgUrl;
+      instImgEl.alt = `${instName} Campus`;
+    }
+
+    // Set Subtle Transparent Institution Background Watermark on Hero
+    const heroBgEl = document.querySelector('#details-hero-bg');
+    if (heroBgEl && instImgUrl) {
+      heroBgEl.style.backgroundImage = `url('${instImgUrl}')`;
+    }
   },
 
   setText(selector, text) {

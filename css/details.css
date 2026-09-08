@@ -4,12 +4,37 @@
    ========================================================================== */
 
 .details-hero {
-  background: linear-gradient(135deg, #6B86E8 0%, #506ECB 100%);
-  color: var(--color-white);
-  padding: clamp(2rem, 4vw, 3rem) 0 clamp(2.5rem, 5vw, 4rem);
   position: relative;
+  background-color: #0F172A;
+  background-image: linear-gradient(120deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.88) 45%, rgba(30, 64, 175, 0.72) 80%, rgba(37, 99, 235, 0.45) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+  padding: clamp(2.5rem, 4.5vw, 3.5rem) 0 clamp(3.5rem, 5.5vw, 4.5rem);
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+.details-hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  opacity: 0.32;
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.85) 75%, rgba(0, 0, 0, 1) 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.85) 75%, rgba(0, 0, 0, 1) 100%);
+  pointer-events: none;
+  transition: background-image 0.5s ease-in-out, opacity 0.3s ease;
+  z-index: 1;
+}
+
+.details-hero-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .breadcrumb {
@@ -18,34 +43,34 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1.25rem;
 }
 
 .breadcrumb a {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   transition: color var(--transition-fast);
 }
 
 .breadcrumb a:hover {
-  color: var(--color-white);
+  color: var(--color-orange-400);
 }
 
 .details-hero-content {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  max-width: 900px;
+  max-width: 850px;
   width: 100%;
   box-sizing: border-box;
 }
 
 .details-institution {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: #E0E7FF;
+  color: #FDBA74;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -53,11 +78,12 @@
 }
 
 .details-course-title {
-  color: var(--color-white);
-  font-size: clamp(1.5rem, 3.5vw, 2.75rem);
+  color: #FFFFFF;
+  font-size: clamp(1.65rem, 3.5vw, 2.75rem);
   font-weight: 800;
   line-height: 1.2;
   word-break: break-word;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .details-hero-tags {
@@ -84,7 +110,7 @@
   padding: 0 1.75rem;
   height: 46px;
   border-radius: var(--radius-xs);
-  box-shadow: 0 4px 12px rgba(242, 101, 34, 0.35);
+  box-shadow: 0 4px 14px rgba(242, 101, 34, 0.45);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -98,8 +124,9 @@
 }
 
 .btn-advisor-hero {
-  background-color: var(--color-white);
-  color: var(--color-navy-800);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   font-weight: 700;
   padding: 0 1.5rem;
   height: 46px;
@@ -109,11 +136,26 @@
   justify-content: center;
   transition: all var(--transition-fast);
   box-sizing: border-box;
+  backdrop-filter: blur(4px);
 }
 
 .btn-advisor-hero:hover {
-  background-color: var(--color-blue-50);
-  color: var(--color-blue-600);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+#official-course-link {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(4px);
+}
+
+#official-course-link:hover {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
 }
 
 /* Metric Cards Section */
