@@ -14,7 +14,8 @@
   background-repeat: no-repeat;
   padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(3rem, 6vw, 5rem);
   color: var(--color-white);
-  overflow: hidden;
+  overflow: visible;
+  z-index: 10;
 }
 
 .hero-bg-shapes {
@@ -22,6 +23,7 @@
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero-shape-1 {
@@ -46,7 +48,7 @@
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 15;
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;

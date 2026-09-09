@@ -96,7 +96,7 @@ window.COURSES = {
         <article class="course-card stagger-item" style="animation-delay: ${index * 0.05}s">
           <div class="course-card-header">
             <h3 class="course-title">
-              <a href="course-details.html?id=${course.id}">${courseName}</a>
+              <a href="course-details?id=${course.id}">${courseName}</a>
             </h3>
 
             <div class="institution-meta-row">
@@ -134,7 +134,7 @@ window.COURSES = {
           </div>
 
           <div class="card-footer">
-            <a href="course-details.html?id=${course.id}" class="btn-card-details">
+            <a href="course-details?id=${course.id}" class="btn-card-details">
               View Course Details
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>

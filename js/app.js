@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // Determine current page context
-  const isDetailsPage = window.location.pathname.includes('course-details.html');
+  const isDetailsPage = window.location.pathname.toLowerCase().includes('course-details') || 
+                        document.querySelector('#details-course-title') !== null ||
+                        document.querySelector('#details-hero') !== null;
 
   if (isDetailsPage) {
     // Course Details Page Flow

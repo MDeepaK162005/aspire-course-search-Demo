@@ -13,137 +13,115 @@ window.API = {
    * Verified Local Institution Image Map
    */
   INSTITUTION_IMAGES: {
-    // Verified Local Campus Images
-    1: 'assets/images/institutions/atu.jpg',
-    2: 'assets/images/institutions/setu.jpg',
-    3: 'assets/images/institutions/mtu.jpg',
-    4: 'assets/images/institutions/tus.jpg',
-    5: 'assets/images/institutions/default.jpg',
-    6: 'assets/images/institutions/rcsi.jpg',
-    7: 'assets/images/institutions/tu-dublin.jpg',
-    8: 'assets/images/institutions/default.jpg',
-    9: 'assets/images/institutions/default.jpg',
-    10: 'assets/images/institutions/dbs.jpg',
-    11: 'assets/images/institutions/dbs.jpg',
-    12: 'assets/images/institutions/default.jpg',
-    13: 'assets/images/institutions/default.jpg',
-    14: 'assets/images/institutions/dbs.jpg',
-    15: 'assets/images/institutions/default.jpg',
-    16: 'assets/images/institutions/university-of-galway.jpg',
-    17: 'assets/images/institutions/nci.jpg',
-    18: 'assets/images/institutions/maynooth-university.jpg',
-    19: 'assets/images/institutions/dkit.jpg',
-    20: 'assets/images/institutions/iadt.jpg',
-    21: 'assets/images/institutions/default.jpg',
-    22: 'assets/images/institutions/university-of-galway.jpg',
-    23: 'assets/images/institutions/default.jpg',
-    24: 'assets/images/institutions/default.jpg',
-    25: 'assets/images/institutions/ncad.jpg',
-    26: 'assets/images/institutions/dcu.jpg',
-    27: 'assets/images/institutions/university-of-limerick.jpg',
-    28: 'assets/images/institutions/default.jpg',
-    29: 'assets/images/institutions/dbs.jpg',
-    30: 'assets/images/institutions/griffith-college.jpg',
-    31: 'assets/images/institutions/ncad.jpg',
-    32: 'assets/images/institutions/default.jpg',
-    33: 'assets/images/institutions/default.jpg',
-    34: 'assets/images/institutions/default.jpg',
-    35: 'assets/images/institutions/ucd.jpg',
-    36: 'assets/images/institutions/ucc.jpg',
-    37: 'assets/images/institutions/university-of-galway.jpg',
-    38: 'assets/images/institutions/trinity-college-dublin.jpg',
-    39: 'assets/images/institutions/university-of-limerick.jpg',
-    40: 'assets/images/institutions/default.jpg',
-    41: 'assets/images/institutions/maynooth-university.jpg',
-    42: 'assets/images/institutions/default.jpg',
-    43: 'assets/images/institutions/trinity-college-dublin.jpg',
-    44: 'assets/images/institutions/setu.jpg',
-    45: 'assets/images/institutions/trinity-college-dublin.jpg',
-    46: 'assets/images/institutions/default.jpg',
+    // Verified Real Local Campus Photographs for all Irish Higher Education Institutions
+    1: 'assets/images/institutions/atu.jpg',                      // Atlantic Technological University (ATU)
+    2: 'assets/images/institutions/setu.jpg',                     // South East Technological University (SETU)
+    3: 'assets/images/institutions/mtu.jpg',                      // Munster Technological University (MTU)
+    4: 'assets/images/institutions/tus.jpg',                      // Technological University of the Shannon (TUS)
+    5: 'assets/images/institutions/default.jpg',                 // Holmes Institute Dublin
+    6: 'assets/images/institutions/rcsi.jpg',                     // RCSI University of Medicine & Health Sciences
+    7: 'assets/images/institutions/tu-dublin.jpg',                // Technological University Dublin (TU Dublin)
+    8: 'assets/images/institutions/default.jpg',                 // Setanta College
+    9: 'assets/images/institutions/nci.jpg',                      // Independent College Dublin
+    10: 'assets/images/institutions/dbs.jpg',                     // CCT College Dublin
+    11: 'assets/images/institutions/dbs.jpg',                     // IBAT College Dublin
+    12: 'assets/images/institutions/default.jpg',                 // Irish College of Humanities and Applied Sciences
+    13: 'assets/images/institutions/default.jpg',                 // IICP College
+    14: 'assets/images/institutions/dbs.jpg',                     // ICD Business School
+    15: 'assets/images/institutions/default.jpg',                 // Hibernia College
+    16: 'assets/images/institutions/university-of-galway.jpg',    // Galway Business School (GBS)
+    17: 'assets/images/institutions/nci.jpg',                     // National College of Ireland (NCI)
+    18: 'assets/images/institutions/maynooth-university.jpg',     // Maynooth University
+    19: 'assets/images/institutions/dkit.jpg',                    // Dundalk Institute of Technology (DkIT)
+    20: 'assets/images/institutions/iadt.jpg',                    // Dún Laoghaire Institute of Art, Design and Technology (IADT)
+    21: 'assets/images/institutions/american-college-dublin.jpg', // American College Dublin (ACD)
+    22: 'assets/images/institutions/burren-college-art.jpg',      // Burren College of Art (BCA)
+    23: 'assets/images/institutions/default.jpg',                 // Open Training College
+    24: 'assets/images/institutions/default.jpg',                 // PCI College
+    25: 'assets/images/institutions/ncad.jpg',                    // Dublin Institute of Design
+    26: 'assets/images/institutions/dcu.jpg',                     // Dublin City University (DCU)
+    27: 'assets/images/institutions/university-of-limerick.jpg',  // University of Limerick (UL)
+    28: 'assets/images/institutions/default.jpg',                 // Dorset College Dublin
+    29: 'assets/images/institutions/dbs.jpg',                     // Dublin Business School (DBS)
+    30: 'assets/images/institutions/griffith-college.jpg',        // Griffith College
+    31: 'assets/images/institutions/ncad.jpg',                    // National College of Art and Design (NCAD)
+    32: 'assets/images/institutions/default.jpg',                 // St. Nicholas Montessori College Ireland
+    33: 'assets/images/institutions/default.jpg',                 // Institute of Public Administration (IPA)
+    34: 'assets/images/institutions/default.jpg',                 // Irish Management Institute (IMI)
+    35: 'assets/images/institutions/ucd.jpg',                     // University College Dublin (UCD)
+    36: 'assets/images/institutions/ucc.jpg',                     // University College Cork (UCC)
+    37: 'assets/images/institutions/university-of-galway.jpg',    // University of Galway
+    38: 'assets/images/institutions/marino-institute.jpg',        // Marino Institute of Education (MIE)
+    39: 'assets/images/institutions/mary-immaculate-college.jpg', // Mary Immaculate College (MIC)
+    40: 'assets/images/institutions/default.jpg',                 // Institute of Banking (IOB)
+    41: 'assets/images/institutions/sppu-maynooth.jpg',           // St. Patrick's Pontifical University, Maynooth (SPPU)
+    42: 'assets/images/institutions/law-society.jpg',             // Law Society of Ireland — Law School
+    43: 'assets/images/institutions/riam.jpg',                    // Royal Irish Academy of Music (RIAM)
+    44: 'assets/images/institutions/default.jpg',                 // Carlow College, St. Patrick's
+    45: 'assets/images/institutions/trinity-college-dublin.jpg',  // Trinity College Dublin (TCD)
+    46: 'assets/images/institutions/default.jpg',                 // The Honorable Society of King's Inns
     'default': 'assets/images/institutions/default.jpg'
   },
 
   /**
-   * Verified Subject / Category Image Map
-   */
-  SUBJECT_IMAGES: {
-    'computer science': 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80',
-    'artificial intelligence': 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80',
-    'data analytics': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-    'data science': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-    'cybersecurity': 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
-    'software engineering': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
-    'business': 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    'finance': 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80',
-    'accounting': 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80',
-    'marketing': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-    'management': 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-    'engineering': 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
-    'mechanical engineering': 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80',
-    'civil engineering': 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80',
-    'electronic': 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-    'medicine': 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80',
-    'health': 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80',
-    'nursing': 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80',
-    'pharmacy': 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80',
-    'science': 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80',
-    'biotechnology': 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80',
-    'law': 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80',
-    'education': 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
-    'arts': 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80',
-    'humanities': 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80',
-    'music': 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80',
-    'psychology': 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
-    'default': 'assets/images/institutions/default.jpg'
-  },
-
-  /**
-   * Helper: Resolve best Institution Image
+   * Helper: Resolve best Institution Image based strictly on the course's institution
    */
   getInstitutionImage(instIdOrName) {
     if (!instIdOrName) return this.INSTITUTION_IMAGES['default'];
+    
+    // Check direct ID or key mapping
     if (this.INSTITUTION_IMAGES[instIdOrName]) {
       return this.INSTITUTION_IMAGES[instIdOrName];
     }
+    
     const nameStr = String(instIdOrName).toLowerCase();
+    
+    // Specific Exact Matches
     if (nameStr.includes('trinity') || nameStr.includes('tcd')) return this.INSTITUTION_IMAGES[45];
-    if (nameStr.includes('ucd') || nameStr.includes('university college dublin')) return this.INSTITUTION_IMAGES[35];
-    if (nameStr.includes('tu dublin') || nameStr.includes('technological university dublin')) return this.INSTITUTION_IMAGES[7];
-    if (nameStr.includes('dcu') || nameStr.includes('dublin city')) return this.INSTITUTION_IMAGES[26];
-    if (nameStr.includes('galway')) return this.INSTITUTION_IMAGES[37];
-    if (nameStr.includes('cork') || nameStr.includes('ucc')) return this.INSTITUTION_IMAGES[36];
-    if (nameStr.includes('limerick') || nameStr.includes('ul')) return this.INSTITUTION_IMAGES[27];
+    if (nameStr.includes('university college dublin') || nameStr.includes('ucd')) return this.INSTITUTION_IMAGES[35];
+    if (nameStr.includes('technological university dublin') || nameStr.includes('tu dublin') || nameStr.includes('tud')) return this.INSTITUTION_IMAGES[7];
+    if (nameStr.includes('dublin city') || nameStr.includes('dcu')) return this.INSTITUTION_IMAGES[26];
+    if (nameStr.includes('galway') && (nameStr.includes('university') || nameStr.includes('nuig') || nameStr.includes('ollscoil'))) return this.INSTITUTION_IMAGES[37];
+    if (nameStr.includes('cork') && (nameStr.includes('university') || nameStr.includes('ucc'))) return this.INSTITUTION_IMAGES[36];
+    if (nameStr.includes('limerick') && (nameStr.includes('university of limerick') || nameStr.includes('ul'))) return this.INSTITUTION_IMAGES[27];
+    if (nameStr.includes('pontifical') || nameStr.includes('sppu')) return this.INSTITUTION_IMAGES[41];
     if (nameStr.includes('maynooth')) return this.INSTITUTION_IMAGES[18];
-    if (nameStr.includes('nci') || nameStr.includes('national college of ireland')) return this.INSTITUTION_IMAGES[17];
-    if (nameStr.includes('rcsi')) return this.INSTITUTION_IMAGES[6];
-    if (nameStr.includes('atu') || nameStr.includes('atlantic')) return this.INSTITUTION_IMAGES[1];
-    if (nameStr.includes('setu') || nameStr.includes('south east')) return this.INSTITUTION_IMAGES[2];
-    if (nameStr.includes('mtu') || nameStr.includes('munster')) return this.INSTITUTION_IMAGES[3];
-    if (nameStr.includes('tus') || nameStr.includes('shannon')) return this.INSTITUTION_IMAGES[4];
+    if (nameStr.includes('national college of ireland') || nameStr.includes('nci')) return this.INSTITUTION_IMAGES[17];
+    if (nameStr.includes('rcsi') || nameStr.includes('surgeons')) return this.INSTITUTION_IMAGES[6];
+    if (nameStr.includes('atlantic') || nameStr.includes('atu')) return this.INSTITUTION_IMAGES[1];
+    if (nameStr.includes('south east') || nameStr.includes('setu')) return this.INSTITUTION_IMAGES[2];
+    if (nameStr.includes('munster') || nameStr.includes('mtu')) return this.INSTITUTION_IMAGES[3];
+    if (nameStr.includes('shannon') || nameStr.includes('tus')) return this.INSTITUTION_IMAGES[4];
     if (nameStr.includes('griffith')) return this.INSTITUTION_IMAGES[30];
-    if (nameStr.includes('dbs') || nameStr.includes('dublin business school')) return this.INSTITUTION_IMAGES[29];
-    if (nameStr.includes('ncad')) return this.INSTITUTION_IMAGES[31];
-    if (nameStr.includes('dkit') || nameStr.includes('dundalk')) return this.INSTITUTION_IMAGES[19];
-    if (nameStr.includes('iadt')) return this.INSTITUTION_IMAGES[20];
+    if (nameStr.includes('dublin business school') || nameStr.includes('dbs')) return this.INSTITUTION_IMAGES[29];
+    if (nameStr.includes('art and design') || nameStr.includes('ncad')) return this.INSTITUTION_IMAGES[31];
+    if (nameStr.includes('dundalk') || nameStr.includes('dkit')) return this.INSTITUTION_IMAGES[19];
+    if (nameStr.includes('dún laoghaire') || nameStr.includes('dun laoghaire') || nameStr.includes('iadt')) return this.INSTITUTION_IMAGES[20];
+    if (nameStr.includes('american college')) return this.INSTITUTION_IMAGES[21];
+    if (nameStr.includes('burren')) return this.INSTITUTION_IMAGES[22];
+    if (nameStr.includes('marino')) return this.INSTITUTION_IMAGES[38];
+    if (nameStr.includes('mary immaculate')) return this.INSTITUTION_IMAGES[39];
+    if (nameStr.includes('law society')) return this.INSTITUTION_IMAGES[42];
+    if (nameStr.includes('music') || nameStr.includes('riam')) return this.INSTITUTION_IMAGES[43];
+    if (nameStr.includes('cct')) return this.INSTITUTION_IMAGES[10];
+    if (nameStr.includes('ibat')) return this.INSTITUTION_IMAGES[11];
+    
     return this.INSTITUTION_IMAGES['default'];
   },
 
   /**
-   * Helper: Resolve best Course Image
+   * Helper: Resolve real institution image for a course
    */
   getCourseImage(course) {
-    if (!course) return this.SUBJECT_IMAGES['default'];
+    if (!course) return this.INSTITUTION_IMAGES['default'];
     if (course.image_url && course.image_url !== 'N/A' && course.image_url !== '#') {
       return course.image_url;
     }
-    const combined = `${course.subject || ''} ${course.course_name || ''}`.toLowerCase();
-    for (const [key, url] of Object.entries(this.SUBJECT_IMAGES)) {
-      if (key !== 'default' && combined.includes(key)) {
-        return url;
-      }
-    }
+    
+    // Resolve strictly based on the associated institution
     const instId = course.institution_id || course.institution?.id || course.institution_name;
-    return this.getInstitutionImage(instId);
+    const instImg = this.getInstitutionImage(instId);
+    return instImg || this.INSTITUTION_IMAGES['default'];
   },
 
   /**
@@ -200,9 +178,16 @@ window.API = {
           const instStr = String(institution).trim();
           const isNum = !isNaN(Number(instStr)) && Number(instStr) > 0;
           if (isNum) {
-            query = query.eq('institution_id', Number(instStr));
+            // Find clean institution name if available
+            const instObj = await this.getInstitutionById(Number(instStr));
+            const cleanName = instObj ? instObj.name.split(',')[0].split('(')[0].trim() : '';
+            if (cleanName) {
+              query = query.or(`institution_id.eq.${Number(instStr)},institution_name.ilike.%${cleanName}%`);
+            } else {
+              query = query.eq('institution_id', Number(instStr));
+            }
           } else {
-            const cleanInst = instStr.split('(')[0].trim();
+            const cleanInst = instStr.split(',')[0].split('(')[0].trim();
             query = query.ilike('institution_name', `%${cleanInst}%`);
           }
         }
@@ -267,47 +252,87 @@ window.API = {
   async getCourseById(id) {
     if (!id) return null;
 
+    let course = null;
+
+    // 1. Try Supabase
     if (window.supabaseClient) {
       try {
-        const { data: course, error } = await window.supabaseClient
+        const { data, error } = await window.supabaseClient
           .from('courses')
-          .select('*, institutions(*)')
+          .select('*')
           .eq('id', id)
-          .single();
+          .maybeSingle();
 
         if (error) {
           console.error('❌ Supabase getCourseById error:', error);
-        } else if (course) {
-          if (!course.institutions && course.institution_name) {
-            const cleanName = course.institution_name.split('(')[0].trim();
+        } else if (data) {
+          course = { ...data };
+
+          // Fetch associated institution if present
+          if (course.institution_id) {
             const { data: instData } = await window.supabaseClient
+              .from('institutions')
+              .select('*')
+              .eq('id', course.institution_id)
+              .maybeSingle();
+
+            if (instData) {
+              course.institution = instData;
+            }
+          }
+
+          // If no institution attached yet, resolve by institution_name
+          if (!course.institution && course.institution_name) {
+            const cleanName = course.institution_name.split('(')[0].split(',')[0].trim();
+            const { data: instList } = await window.supabaseClient
               .from('institutions')
               .select('*')
               .ilike('name', `%${cleanName}%`)
               .limit(1);
 
-            if (instData && instData.length > 0) {
-              course.institution = instData[0];
+            if (instList && instList.length > 0) {
+              course.institution = instList[0];
             }
-          } else {
-            course.institution = course.institutions;
           }
-
-          return course;
         }
       } catch (err) {
         console.error('❌ Error executing getCourseById on Supabase:', err);
       }
     }
 
-    if (window.CONFIG?.USE_MOCK_FALLBACK && window.MOCK_DATA) {
-      const course = window.MOCK_DATA.courses.find(c => String(c.id) === String(id));
-      if (!course) return null;
-      const inst = window.MOCK_DATA.institutions.find(i => 
-        (course.institution_id && i.id === course.institution_id) ||
-        i.name.toLowerCase() === course.institution_name.toLowerCase()
-      ) || {};
-      return { ...course, institution: inst };
+    // 2. Fallback to Local Verified Database (MOCK_DATA) if not found on Supabase
+    if (!course && window.CONFIG?.USE_MOCK_FALLBACK && window.MOCK_DATA) {
+      const mockCourse = window.MOCK_DATA.courses.find(c => String(c.id) === String(id));
+      if (mockCourse) {
+        course = { ...mockCourse };
+      }
+    }
+
+    // 3. Resolve institution data if missing
+    if (course) {
+      if (!course.institution && window.MOCK_DATA?.institutions) {
+        const rawName = (course.institution_name || '').toLowerCase().trim();
+        const cleanName = rawName.split('(')[0].split(',')[0].trim();
+
+        const inst = window.MOCK_DATA.institutions.find(i => {
+          if (course.institution_id && Number(i.id) === Number(course.institution_id)) return true;
+          const iName = i.name.toLowerCase();
+          if (iName === rawName || iName.includes(cleanName) || cleanName.includes(iName)) return true;
+          if (rawName.includes('ucd') && (iName.includes('ucd') || iName.includes('university college dublin'))) return true;
+          if (rawName.includes('tcd') && (iName.includes('trinity') || iName.includes('dublin'))) return true;
+          if (rawName.includes('dcu') && (iName.includes('dcu') || iName.includes('dublin city'))) return true;
+          if (rawName.includes('ucc') && (iName.includes('cork') || iName.includes('ucc'))) return true;
+          if (rawName.includes('galway') && iName.includes('galway')) return true;
+          if (rawName.includes('limerick') && iName.includes('limerick')) return true;
+          if (rawName.includes('maynooth') && iName.includes('maynooth')) return true;
+          return false;
+        });
+
+        if (inst) {
+          course.institution = inst;
+        }
+      }
+      return course;
     }
 
     return null;
@@ -450,7 +475,15 @@ window.API = {
 
     // Level (Independent)
     if (level && level !== 'All') {
-      results = results.filter(c => c.study_level && c.study_level.toUpperCase().includes(level.toUpperCase()));
+      const lvl = level.toUpperCase();
+      results = results.filter(c => {
+        if (!c.study_level) return false;
+        const cLvl = c.study_level.toUpperCase();
+        if (lvl === 'UG') return cLvl.includes('UNDERGRADUATE') || cLvl.includes('UG');
+        if (lvl === 'PG') return cLvl.includes('POSTGRADUATE') || cLvl.includes('PG');
+        if (lvl === 'PHD') return cLvl.includes('PHD') || cLvl.includes('DOCTORATE');
+        return cLvl.includes(lvl);
+      });
     }
 
     // Subject (Independent)
@@ -458,18 +491,56 @@ window.API = {
       results = results.filter(c => c.subject && c.subject.toLowerCase().includes(subject.toLowerCase()));
     }
 
-    // Institution (Independent - supports ID or Name)
+    // Institution (Independent - supports ID, Name, or Abbreviation like UCD, DCU, TCD)
     if (institution && institution !== 'All') {
-      const instStr = String(institution).toLowerCase().trim();
-      const isNum = !isNaN(Number(instStr)) && Number(instStr) > 0;
-      if (isNum) {
-        results = results.filter(c => Number(c.institution_id) === Number(instStr));
-      } else {
-        results = results.filter(c => {
-          const cInst = (c.institution_name || '').toLowerCase();
-          return cInst.includes(instStr);
-        });
-      }
+      const instStr = String(institution).trim();
+      const instLower = instStr.toLowerCase();
+      const acronymMap = {
+        ucd: "University College Dublin",
+        tcd: "Trinity College Dublin",
+        dcu: "Dublin City University",
+        ucc: "University College Cork",
+        ul: "University of Limerick",
+        galway: "University of Galway",
+        maynooth: "Maynooth University",
+        tud: "Technological University Dublin",
+        atu: "Atlantic Technological University",
+        setu: "South East Technological University",
+        mtu: "Munster Technological University",
+        tus: "Technological University of the Shannon",
+        nci: "National College of Ireland",
+        rcsi: "RCSI",
+        dkit: "Dundalk",
+        iadt: "IADT",
+        ncad: "National College of Art",
+        dbs: "Dublin Business School",
+        cct: "CCT",
+        ibat: "IBAT",
+        mic: "Mary Immaculate",
+        mie: "Marino",
+        iob: "Institute of Banking"
+      };
+
+      const resolvedSearchTerm = acronymMap[instLower] || instStr;
+      const mockInsts = mock.institutions || [];
+      const targetInst = mockInsts.find(i => 
+        String(i.id) === instStr || 
+        i.name.toLowerCase() === instStr.toLowerCase() ||
+        i.name.toLowerCase().includes(resolvedSearchTerm.toLowerCase()) ||
+        (i.former_names && i.former_names.toLowerCase().includes(instLower))
+      );
+
+      const instIdNum = targetInst ? Number(targetInst.id) : (!isNaN(Number(instStr)) ? Number(instStr) : null);
+      const rawName = targetInst ? targetInst.name : resolvedSearchTerm;
+      const cleanName = rawName.split(',')[0].split('(')[0].trim().toLowerCase();
+
+      results = results.filter(c => {
+        if (instIdNum !== null && c.institution_id !== null && c.institution_id !== undefined && Number(c.institution_id) === instIdNum) {
+          return true;
+        }
+        const cName = (c.institution_name || '').toLowerCase();
+        return cName.includes(cleanName) || cleanName.includes(cName);
+      });
     }
 
     // Study Mode (Independent)

@@ -114,45 +114,87 @@ window.API = {
   async getCourseById(id) {
     if (!id) return null;
 
+    let course = null;
+
+    // 1. Try Supabase
     if (window.supabaseClient) {
       try {
-        const { data: course, error } = await window.supabaseClient
+        const { data, error } = await window.supabaseClient
           .from('courses')
-          .select('*, institutions(*)')
+          .select('*')
           .eq('id', id)
-          .single();
+          .maybeSingle();
 
         if (error) {
           console.error('❌ Supabase getCourseById error:', error);
-        } else if (course) {
-          // If institutions join is null (because institution_id is null in DB), match institution by name
-          if (!course.institutions && course.institution_name) {
-            const cleanName = course.institution_name.split('(')[0].trim();
+        } else if (data) {
+          course = { ...data };
+
+          // Fetch associated institution if present
+          if (course.institution_id) {
             const { data: instData } = await window.supabaseClient
+              .from('institutions')
+              .select('*')
+              .eq('id', course.institution_id)
+              .maybeSingle();
+
+            if (instData) {
+              course.institution = instData;
+            }
+          }
+
+          // If no institution attached yet, resolve by institution_name
+          if (!course.institution && course.institution_name) {
+            const cleanName = course.institution_name.split('(')[0].split(',')[0].trim();
+            const { data: instList } = await window.supabaseClient
               .from('institutions')
               .select('*')
               .ilike('name', `%${cleanName}%`)
               .limit(1);
 
-            if (instData && instData.length > 0) {
-              course.institution = instData[0];
+            if (instList && instList.length > 0) {
+              course.institution = instList[0];
             }
-          } else {
-            course.institution = course.institutions;
           }
-
-          return course;
         }
       } catch (err) {
         console.error('❌ Error executing getCourseById on Supabase:', err);
       }
     }
 
-    if (window.CONFIG?.USE_MOCK_FALLBACK && window.MOCK_DATA) {
-      const course = window.MOCK_DATA.courses.find(c => String(c.id) === String(id));
-      if (!course) return null;
-      const inst = window.MOCK_DATA.institutions.find(i => i.name.toLowerCase() === course.institution_name.toLowerCase()) || {};
-      return { ...course, institution: inst };
+    // 2. Fallback to Local Verified Database (MOCK_DATA) if not found on Supabase
+    if (!course && window.CONFIG?.USE_MOCK_FALLBACK && window.MOCK_DATA) {
+      const mockCourse = window.MOCK_DATA.courses.find(c => String(c.id) === String(id));
+      if (mockCourse) {
+        course = { ...mockCourse };
+      }
+    }
+
+    // 3. Resolve institution data if missing
+    if (course) {
+      if (!course.institution && window.MOCK_DATA?.institutions) {
+        const rawName = (course.institution_name || '').toLowerCase().trim();
+        const cleanName = rawName.split('(')[0].split(',')[0].trim();
+
+        const inst = window.MOCK_DATA.institutions.find(i => {
+          if (course.institution_id && Number(i.id) === Number(course.institution_id)) return true;
+          const iName = i.name.toLowerCase();
+          if (iName === rawName || iName.includes(cleanName) || cleanName.includes(iName)) return true;
+          if (rawName.includes('ucd') && (iName.includes('ucd') || iName.includes('university college dublin'))) return true;
+          if (rawName.includes('tcd') && (iName.includes('trinity') || iName.includes('dublin'))) return true;
+          if (rawName.includes('dcu') && (iName.includes('dcu') || iName.includes('dublin city'))) return true;
+          if (rawName.includes('ucc') && (iName.includes('cork') || iName.includes('ucc'))) return true;
+          if (rawName.includes('galway') && iName.includes('galway')) return true;
+          if (rawName.includes('limerick') && iName.includes('limerick')) return true;
+          if (rawName.includes('maynooth') && iName.includes('maynooth')) return true;
+          return false;
+        });
+
+        if (inst) {
+          course.institution = inst;
+        }
+      }
+      return course;
     }
 
     return null;

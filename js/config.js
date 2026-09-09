@@ -13,6 +13,6 @@ window.CONFIG = {
   // Default Page Size
   COURSES_PER_PAGE: 12,
 
-  // Fallback mode if Supabase credentials are placeholders
-  USE_MOCK_FALLBACK: false
+  // Fallback mode if Supabase connection fails or is offline
+  USE_MOCK_FALLBACK: true
 };
