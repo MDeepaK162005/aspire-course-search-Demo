@@ -5,10 +5,17 @@
 
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, #6B86E8 0%, #506ECB 100%);
-  padding: 3.5rem 0 4.5rem;
+  background-color: #1E40AF;
+  background-image: 
+    linear-gradient(135deg, rgba(15, 45, 120, 0.50) 0%, rgba(30, 64, 175, 0.35) 50%, rgba(29, 78, 216, 0.25) 100%),
+    url('../assets/images/Background_image.png');
+  background-position: center 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(3rem, 6vw, 5rem);
   color: var(--color-white);
-  overflow: hidden;
+  overflow: visible;
+  z-index: 10;
 }
 
 .hero-bg-shapes {
@@ -16,6 +23,7 @@
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero-shape-1 {
@@ -24,7 +32,7 @@
   right: -50px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
 }
 
@@ -34,21 +42,23 @@
   left: -50px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 15;
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .hero-eyebrow {
   display: inline-block;
-  font-size: 0.825rem;
+  font-size: clamp(0.75rem, 2vw, 0.825rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -58,19 +68,19 @@
 
 .hero-title {
   color: var(--color-white);
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-size: clamp(1.65rem, 4.5vw, 3.5rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
-  line-height: 1.15;
+  line-height: 1.2;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-size: clamp(0.875rem, 2.2vw, 1.15rem);
   color: rgba(255, 255, 255, 0.92);
   font-weight: 500;
   max-width: 720px;
-  margin: 0 auto 2.25rem;
-  line-height: 1.5;
+  margin: 0 auto clamp(1.25rem, 3.5vw, 2.25rem);
+  line-height: 1.45;
 }

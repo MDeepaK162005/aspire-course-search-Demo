@@ -70,7 +70,7 @@ window.COURSES = {
   },
 
   /**
-   * Render Course Cards Grid with full metadata & bookmark action
+   * Render Course Cards Grid with image media banner & full metadata
    */
   renderGrid(courses) {
     let html = '';
@@ -92,44 +92,94 @@ window.COURSES = {
       const fee = this.formatValue(course.fee || course.institution?.international_tuition_fee, '€12,500 - €18,500');
       const englishReq = this.formatValue(course.ielts || course.requirements?.ielts_overall, 'IELTS 6.5');
 
+      // Resolve relevant course / university image
+      const courseImgUrl = window.API?.getCourseImage ? window.API.getCourseImage(course) : 'assets/images/placeholder.svg';
+
+      // Detect Primary / Exact Match on active search
+      const activeSearch = (window.FILTERS?.currentFilters?.search || '').toLowerCase().trim();
+      const rawCourseName = (course.course_name || '').toLowerCase().trim();
+      const rawCourseCode = (course.course_code || '').toLowerCase().trim();
+      const isExactMatch = activeSearch.length >= 3 && (
+        rawCourseName === activeSearch ||
+        rawCourseCode === activeSearch ||
+        rawCourseName.startsWith(activeSearch) ||
+        (activeSearch.split(/\s+/).length > 1 && rawCourseName.includes(activeSearch))
+      ) && index === 0;
+
       html += `
-        <article class="course-card stagger-item" style="animation-delay: ${index * 0.05}s">
-          <div class="course-card-header">
-            <h3 class="course-title">
-              <a href="course-details?id=${course.id}">${courseName}</a>
-            </h3>
-
-            <div class="institution-meta-row">
-              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-              <span>${instName}</span>
-              <span class="location-badge">&bull; ${location}</span>
-            </div>
-
-            <div class="card-tags-row">
-              <span class="tag-badge tag-badge-primary">${levelBadge}</span>
-              <span class="tag-badge">${qualification}</span>
-              <span class="tag-badge">Level ${nfqClean}</span>
+        <article class="course-card stagger-item ${isExactMatch ? 'is-primary-match' : ''}" style="animation-delay: ${index * 0.05}s">
+          <div class="course-card-media">
+            <img 
+              src="${courseImgUrl}" 
+              alt="${courseName} - ${instName}" 
+              class="course-card-img" 
+              loading="lazy"
+              onerror="this.onerror=null; this.src='assets/images/placeholder.svg';"
+            >
+            <div class="course-card-media-overlay">
+              <span class="course-media-pill" title="${instName}">
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                ${instName}
+              </span>
+              ${isExactMatch ? `
+                <span class="exact-match-media-badge">
+                  <svg width="11" height="11" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Top Match
+                </span>
+              ` : ''}
             </div>
           </div>
 
-          <div class="card-details-grid">
-            <div class="detail-item">
-              <span class="detail-item-label">Tuition Fee</span>
-              <span class="detail-item-value detail-item-value-highlight">${fee}</span>
+          <div class="course-card-body">
+            <div class="course-card-header">
+              <h3 class="course-title">
+                <a href="course-details?id=${course.id}">${courseName}</a>
+              </h3>
+
+              <div class="institution-meta-row">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span>${instName}</span>
+                <span class="location-badge">&bull; ${location}</span>
+              </div>
+
+              <div class="card-tags-row">
+                ${isExactMatch ? `
+                  <span class="tag-badge tag-badge-exact-match">
+                    <svg width="11" height="11" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Primary Match
+                  </span>
+                ` : ''}
+                <span class="tag-badge tag-badge-primary">${levelBadge}</span>
+                <span class="tag-badge">${qualification}</span>
+                <span class="tag-badge">Level ${nfqClean}</span>
+              </div>
             </div>
-            <div class="detail-item">
-              <span class="detail-item-label">Duration</span>
-              <span class="detail-item-value">${duration}</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-item-label">Next Intake</span>
-              <span class="detail-item-value">${intake}</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-item-label">English Req.</span>
-              <span class="detail-item-value">${englishReq}</span>
+
+            <div class="card-details-grid">
+              <div class="detail-item">
+                <span class="detail-item-label">Tuition Fee</span>
+                <span class="detail-item-value detail-item-value-highlight">${fee}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item-label">Duration</span>
+                <span class="detail-item-value">${duration}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item-label">Next Intake</span>
+                <span class="detail-item-value">${intake}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item-label">English Req.</span>
+                <span class="detail-item-value">${englishReq}</span>
+              </div>
             </div>
           </div>
 

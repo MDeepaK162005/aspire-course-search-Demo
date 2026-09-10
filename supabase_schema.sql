@@ -684,3 +684,12 @@ ON CONFLICT (id) DO UPDATE SET course_name = EXCLUDED.course_name;
 INSERT INTO public.courses (id, institution_id, institution_name, course_name, qualification, nfq_level, subject, study_level, study_mode, official_url, duration)
 VALUES (162, NULL, 'Burren College of Art', 'MFA in Art & Ecology (awarded by University of Galway)', 'MFA', 'Level 9', 'Art and Ecology', 'Postgraduate', 'Full-Time', 'https://www.burrencollege.ie/programmes/mfa-ma-in-art-ecology/', 'N/A')
 ON CONFLICT (id) DO UPDATE SET course_name = EXCLUDED.course_name;
+INSERT INTO public.courses (id, institution_id, institution_name, course_name, qualification, nfq_level, subject, study_level, study_mode, course_code, official_url, duration, image_url)
+VALUES (163, 35, 'University College Dublin', 'MSc Advanced Artificial Intelligence', 'MSc', 'Level 9', 'Artificial Intelligence', 'Postgraduate', 'Full-Time', 'T413', 'https://www.ucd.ie/courses/msc-advanced-artificial-intelligence', 'N/A', 'assets/images/courses/msc-advanced-artificial-intelligence.jpg')
+ON CONFLICT (id) DO UPDATE SET course_name = EXCLUDED.course_name;
+INSERT INTO public.courses (id, institution_id, institution_name, course_name, qualification, nfq_level, subject, study_level, study_mode, course_code, official_url, duration, image_url)
+VALUES (164, 35, 'University College Dublin', 'MSc Financial Data Science (Smurfit)', 'MSc', 'Level 9', 'Finance / Data Science', 'Postgraduate', 'Full-Time', 'B746', 'https://www.smurfitschool.ie/programmes/masters/mscinfinancialdatascience/', 'N/A', 'assets/images/courses/msc-financial-data-science.jpg')
+ON CONFLICT (id) DO UPDATE SET course_name = EXCLUDED.course_name;
+INSERT INTO public.courses (id, institution_id, institution_name, course_name, qualification, nfq_level, subject, study_level, study_mode, course_code, official_url, duration, image_url)
+VALUES (165, 35, 'University College Dublin', 'MSc Statistical Data Science', 'MSc', 'Level 9', 'Data Science', 'Postgraduate', 'Full-Time', 'T387', 'https://www.ucd.ie/courses/msc-statistical-data-science', 'N/A', 'assets/images/courses/msc-statistical-data-science.jpg')
+ON CONFLICT (id) DO UPDATE SET course_name = EXCLUDED.course_name;

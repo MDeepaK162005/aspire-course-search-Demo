@@ -295,7 +295,13 @@ window.FILTERS = {
 
     // Search Keyword
     const heroKw = document.querySelector('#hero-keyword-input');
-    if (heroKw) heroKw.value = this.currentFilters.search;
+    const heroClearBtn = document.querySelector('#hero-keyword-clear-btn');
+    if (heroKw) {
+      heroKw.value = this.currentFilters.search;
+      if (heroClearBtn) {
+        heroClearBtn.style.display = this.currentFilters.search ? 'flex' : 'none';
+      }
+    }
     const sidebarKw = document.querySelector('#filter-search-input');
     if (sidebarKw) sidebarKw.value = this.currentFilters.search;
     const mobileKw = document.querySelector('#mobile-search-input');
@@ -348,13 +354,24 @@ window.FILTERS = {
     }
 
     const heroKeywordInput = document.querySelector('#hero-keyword-input');
+    const heroKeywordClearBtn = document.querySelector('#hero-keyword-clear-btn');
     if (heroKeywordInput) {
       let timer;
       heroKeywordInput.addEventListener('input', (e) => {
+        if (heroKeywordClearBtn) {
+          heroKeywordClearBtn.style.display = e.target.value ? 'flex' : 'none';
+        }
         clearTimeout(timer);
         timer = setTimeout(() => {
           this.updateFilter('search', e.target.value.trim());
         }, 300);
+      });
+    }
+    if (heroKeywordClearBtn) {
+      heroKeywordClearBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.updateFilter('search', '');
+        if (heroKeywordInput) heroKeywordInput.focus();
       });
     }
 

@@ -49,8 +49,17 @@ window.UI = {
       overlay.classList.toggle('active');
     };
 
+    const closeNav = () => {
+      toggleBtn.classList.remove('active');
+      drawer.classList.remove('active');
+      overlay.classList.remove('active');
+    };
+
     toggleBtn.addEventListener('click', toggle);
-    overlay.addEventListener('click', toggle);
+    overlay.addEventListener('click', closeNav);
+    drawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
+    });
   },
 
   /**

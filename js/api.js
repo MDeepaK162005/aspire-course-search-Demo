@@ -465,12 +465,20 @@ window.API = {
     // Search keyword
     if (search.trim()) {
       const q = search.toLowerCase().trim();
-      results = results.filter(c =>
-        (c.course_name && c.course_name.toLowerCase().includes(q)) ||
-        (c.institution_name && c.institution_name.toLowerCase().includes(q)) ||
-        (c.subject && c.subject.toLowerCase().includes(q)) ||
-        (c.qualification && c.qualification.toLowerCase().includes(q))
-      );
+      const qWords = q.split(/\s+/).filter(w => w.length > 1);
+
+      results = results.filter(c => {
+        const name = (c.course_name || '').toLowerCase();
+        const code = (c.course_code || '').toLowerCase();
+        const inst = (c.institution_name || '').toLowerCase();
+        const sub = (c.subject || '').toLowerCase();
+        const qual = (c.qualification || '').toLowerCase();
+        const fullText = `${name} ${code} ${inst} ${sub} ${qual}`;
+
+        if (fullText.includes(q)) return true;
+        if (qWords.length > 1 && qWords.every(w => fullText.includes(w))) return true;
+        return false;
+      });
     }
 
     // Level (Independent)
@@ -562,6 +570,36 @@ window.API = {
       results.sort((a, b) => a.course_name.localeCompare(b.course_name));
     } else if (sortBy === 'university') {
       results.sort((a, b) => a.institution_name.localeCompare(b.institution_name));
+    } else if (search && search.trim()) {
+      const q = search.toLowerCase().trim();
+      const qTokens = q.split(/\s+/).filter(Boolean);
+
+      results.sort((a, b) => {
+        const score = (c) => {
+          let s = 0;
+          const name = (c.course_name || '').toLowerCase();
+          const code = (c.course_code || '').toLowerCase();
+          const sub = (c.subject || '').toLowerCase();
+          const inst = (c.institution_name || '').toLowerCase();
+
+          if (name === q || code === q) s += 1000;
+          else if (name.startsWith(q)) s += 600;
+          else if (name.includes(q)) s += 400;
+
+          qTokens.forEach(t => {
+            if (name.includes(t)) s += 50;
+          });
+
+          if (sub === q) s += 150;
+          else if (sub.includes(q)) s += 80;
+
+          if (inst.includes(q)) s += 30;
+
+          return s;
+        };
+
+        return score(b) - score(a);
+      });
     }
 
     const total = results.length;

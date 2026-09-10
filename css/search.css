@@ -129,8 +129,8 @@
 /* ---- Search Fields Grid ---- */
 .search-fields-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1.1fr 1fr 190px;
-  gap: 0.85rem;
+  grid-template-columns: 1.35fr 1.15fr 1.15fr 0.95fr;
+  gap: 1rem;
   align-items: flex-end;
   width: 100%;
   box-sizing: border-box;
@@ -143,6 +143,63 @@
   width: 100%;
   box-sizing: border-box;
   min-width: 0;
+}
+
+/* ---- Input Wrapper & Hero Keyword Input ---- */
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero-search-input {
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-slate-200);
+  border-radius: 10px;
+  padding: 0 2.25rem 0 0.95rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--color-slate-800);
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  box-sizing: border-box;
+}
+
+.hero-search-input:focus {
+  border-color: var(--color-blue-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.14);
+}
+
+.hero-search-input::placeholder {
+  color: var(--color-slate-400);
+  font-weight: 400;
+}
+
+.hero-input-clear-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-slate-400);
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.hero-input-clear-btn:hover {
+  color: var(--color-slate-700);
+  background-color: var(--color-slate-100);
 }
 
 /* ---- Field Labels ---- */
@@ -163,7 +220,7 @@
 }
 
 .search-field-label-invisible {
-  visibility: hidden;
+  display: none;
 }
 
 /* ---- Native Select (hidden, replaced by combobox) ---- */
@@ -171,19 +228,25 @@
   display: none;
 }
 
-/* ---- Search Button ---- */
+/* ---- Search Button (Centered on Desktop) ---- */
 .search-btn-group {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  margin-top: 0.85rem;
 }
 
 .btn-search-main {
   background: linear-gradient(135deg, #f26522 0%, #e55a0e 100%);
   color: var(--color-white);
   font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0 1.25rem;
+  font-size: 0.925rem;
+  padding: 0 2.5rem;
   height: 50px;
-  width: 100%;
+  width: auto;
+  min-width: 230px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(242, 101, 34, 0.38);
   display: inline-flex;
@@ -194,6 +257,7 @@
   box-sizing: border-box;
   white-space: nowrap;
   letter-spacing: 0.01em;
+  cursor: pointer;
 }
 
 .btn-search-main:hover {
@@ -208,16 +272,21 @@
 }
 
 /* ---- Responsive Breakpoints ---- */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .search-fields-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.85rem;
   }
-  .search-field-label-invisible {
-    display: none;
+  .search-field-keyword {
+    grid-column: span 2;
   }
   .search-btn-group {
     grid-column: span 2;
+    margin-top: 0.5rem;
+  }
+  .btn-search-main {
+    width: 100%;
+    max-width: 360px;
   }
 }
 
@@ -226,8 +295,14 @@
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
+  .search-field-keyword,
   .search-btn-group {
     grid-column: 1;
+    margin-top: 0.25rem;
+  }
+  .btn-search-main {
+    width: 100%;
+    max-width: 100%;
   }
   .hero-search-card {
     padding: 1.1rem 1rem;

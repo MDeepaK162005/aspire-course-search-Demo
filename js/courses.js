@@ -95,8 +95,19 @@ window.COURSES = {
       // Resolve relevant course / university image
       const courseImgUrl = window.API?.getCourseImage ? window.API.getCourseImage(course) : 'assets/images/placeholder.svg';
 
+      // Detect Primary / Exact Match on active search
+      const activeSearch = (window.FILTERS?.currentFilters?.search || '').toLowerCase().trim();
+      const rawCourseName = (course.course_name || '').toLowerCase().trim();
+      const rawCourseCode = (course.course_code || '').toLowerCase().trim();
+      const isExactMatch = activeSearch.length >= 3 && (
+        rawCourseName === activeSearch ||
+        rawCourseCode === activeSearch ||
+        rawCourseName.startsWith(activeSearch) ||
+        (activeSearch.split(/\s+/).length > 1 && rawCourseName.includes(activeSearch))
+      ) && index === 0;
+
       html += `
-        <article class="course-card stagger-item" style="animation-delay: ${index * 0.05}s">
+        <article class="course-card stagger-item ${isExactMatch ? 'is-primary-match' : ''}" style="animation-delay: ${index * 0.05}s">
           <div class="course-card-media">
             <img 
               src="${courseImgUrl}" 
@@ -112,6 +123,14 @@ window.COURSES = {
                 </svg>
                 ${instName}
               </span>
+              ${isExactMatch ? `
+                <span class="exact-match-media-badge">
+                  <svg width="11" height="11" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Top Match
+                </span>
+              ` : ''}
             </div>
           </div>
 
@@ -130,6 +149,14 @@ window.COURSES = {
               </div>
 
               <div class="card-tags-row">
+                ${isExactMatch ? `
+                  <span class="tag-badge tag-badge-exact-match">
+                    <svg width="11" height="11" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Primary Match
+                  </span>
+                ` : ''}
                 <span class="tag-badge tag-badge-primary">${levelBadge}</span>
                 <span class="tag-badge">${qualification}</span>
                 <span class="tag-badge">Level ${nfqClean}</span>

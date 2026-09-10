@@ -25,8 +25,9 @@ p {
   max-width: var(--max-width-container);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--space-lg);
-  padding-right: var(--space-lg);
+  padding-left: clamp(0.75rem, 3vw, 1.5rem);
+  padding-right: clamp(0.75rem, 3vw, 1.5rem);
+  box-sizing: border-box;
 }
 
 /* Utility Badges */
