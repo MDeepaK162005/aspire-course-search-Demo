@@ -137,6 +137,7 @@ window.API = {
       studyMode = '',
       nfqLevel = '',
       duration = '',
+      intake = '',
       ielts = '',
       sortBy = 'relevance',
       page = 1,
@@ -205,6 +206,14 @@ window.API = {
         // NFQ Level Filter (Independent)
         if (nfqLevel && nfqLevel !== 'All') {
           query = query.ilike('nfq_level', `%${nfqLevel}%`);
+        }
+
+        // Intake Filter — only January, February, September are supported; others are ignored
+        if (intake && intake !== 'All') {
+          const _validIntakes = ['january', 'february', 'september'];
+          if (_validIntakes.includes(intake.trim().toLowerCase())) {
+            query = query.ilike('intake', `%${intake}%`);
+          }
         }
 
         // Sorting
@@ -457,6 +466,7 @@ window.API = {
       studyMode = '',
       nfqLevel = '',
       duration = '',
+      intake = '',
       sortBy = 'relevance',
       page = 1,
       limit = 12
@@ -559,6 +569,19 @@ window.API = {
     // NFQ Level (Independent)
     if (nfqLevel && nfqLevel !== 'All') {
       results = results.filter(c => String(c.nfq_level).includes(String(nfqLevel)));
+    }
+
+    // Intake — only the three supported months are recognised; any other value is ignored.
+    const SUPPORTED_INTAKES = ['january', 'february', 'september'];
+    if (intake && intake !== 'All') {
+      const selectedMonth = intake.trim().toLowerCase();
+      if (SUPPORTED_INTAKES.includes(selectedMonth)) {
+        results = results.filter(c => {
+          if (!c.intake) return false;
+          const tokens = c.intake.split(/[,\/]/).map(t => t.trim().toLowerCase()).filter(Boolean);
+          return tokens.includes(selectedMonth);
+        });
+      }
     }
 
     // Duration (Independent)

@@ -1678,7 +1678,7 @@ window.MOCK_DATA = {
       "course_code": "TR033",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/computer-science/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1695,7 +1695,7 @@ window.MOCK_DATA = {
       "course_code": "TR034",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/computer-science-and-business/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1712,7 +1712,7 @@ window.MOCK_DATA = {
       "course_code": "TR032",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/engineering/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1729,7 +1729,7 @@ window.MOCK_DATA = {
       "course_code": "TR034",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/management-science-and-information-systems-studies/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1746,7 +1746,7 @@ window.MOCK_DATA = {
       "course_code": "POSTGRAD-TCD",
       "official_url": "https://www.tcd.ie/courses/postgraduate/courses/computer-science---data-science-strand-msc--pgrad-dip/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1763,7 +1763,7 @@ window.MOCK_DATA = {
       "course_code": "POSTGRAD-TCD",
       "official_url": "https://www.tcd.ie/courses/postgraduate/courses/computer-science---intelligent-systems-strand-msc--pgrad-dip/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1780,7 +1780,7 @@ window.MOCK_DATA = {
       "course_code": "POSTGRAD-TCD",
       "official_url": "https://www.tcd.ie/courses/postgraduate/courses/applied-artificial-intelligence-msc/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1797,7 +1797,7 @@ window.MOCK_DATA = {
       "course_code": "POSTGRAD-TCD",
       "official_url": "https://www.tcd.ie/courses/postgraduate/courses/quantum-science-and-technology-msc/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1814,7 +1814,7 @@ window.MOCK_DATA = {
       "course_code": "TR051",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/medicine/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1831,7 +1831,7 @@ window.MOCK_DATA = {
       "course_code": "TR052",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/dental-science/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1848,7 +1848,7 @@ window.MOCK_DATA = {
       "course_code": "TR072",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/pharmacy/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1865,7 +1865,7 @@ window.MOCK_DATA = {
       "course_code": "TR004",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/law/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1882,7 +1882,7 @@ window.MOCK_DATA = {
       "course_code": "TR080",
       "official_url": "https://www.tcd.ie/courses/undergraduate/courses/business-studies/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1899,7 +1899,7 @@ window.MOCK_DATA = {
       "course_code": "POSTGRAD-TCD",
       "official_url": "https://www.tcd.ie/courses/postgraduate/courses/finance-msc/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1916,7 +1916,7 @@ window.MOCK_DATA = {
       "course_code": "POSTGRAD-TCD",
       "official_url": "https://www.tcd.ie/courses/postgraduate/courses/digital-marketing-strategy-msc/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1933,7 +1933,7 @@ window.MOCK_DATA = {
       "course_code": "DN201",
       "official_url": "https://www.ucd.ie/courses/bsc-computer-science",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1950,7 +1950,7 @@ window.MOCK_DATA = {
       "course_code": "DN201-DS",
       "official_url": "https://www.ucd.ie/courses/bsc-computer-science-data-science",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1967,7 +1967,7 @@ window.MOCK_DATA = {
       "course_code": "T150",
       "official_url": "https://www.ucd.ie/courses/msc-computer-science-negotiated-learning",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -1984,7 +1984,7 @@ window.MOCK_DATA = {
       "course_code": "T381",
       "official_url": "https://www.ucd.ie/courses/msc-artificial-intelligence",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2001,7 +2001,7 @@ window.MOCK_DATA = {
       "course_code": "T360",
       "official_url": "https://www.ucd.ie/courses/msc-cybersecurity",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2018,7 +2018,7 @@ window.MOCK_DATA = {
       "course_code": "DN150",
       "official_url": "https://www.ucd.ie/courses/beng-biomedical-engineering",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2035,7 +2035,7 @@ window.MOCK_DATA = {
       "course_code": "DN100",
       "official_url": "https://www.ucd.ie/courses/bsc-architecture",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2052,7 +2052,7 @@ window.MOCK_DATA = {
       "course_code": "DN650",
       "official_url": "https://www.ucd.ie/courses/bachelor-of-commerce",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2069,7 +2069,7 @@ window.MOCK_DATA = {
       "course_code": "DN670",
       "official_url": "https://www.ucd.ie/courses/bsc-economics-and-finance",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2086,7 +2086,7 @@ window.MOCK_DATA = {
       "course_code": "DN600",
       "official_url": "https://www.ucd.ie/courses/bcl-law",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2103,7 +2103,7 @@ window.MOCK_DATA = {
       "course_code": "DN400",
       "official_url": "https://www.ucd.ie/courses/medicine-undergraduate",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2120,7 +2120,7 @@ window.MOCK_DATA = {
       "course_code": "DN300",
       "official_url": "https://www.ucd.ie/courses/veterinary-medicine",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2137,7 +2137,7 @@ window.MOCK_DATA = {
       "course_code": "B423",
       "official_url": "https://www.smurfitschool.ie/programmes/masters/mscinbusinessanalytics/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2154,7 +2154,7 @@ window.MOCK_DATA = {
       "course_code": "B269",
       "official_url": "https://www.smurfitschool.ie/programmes/masters/mscinquantitativefinance/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2171,7 +2171,7 @@ window.MOCK_DATA = {
       "course_code": "B188",
       "official_url": "https://www.smurfitschool.ie/programmes/thesmurfitmba/executivemba/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2188,7 +2188,7 @@ window.MOCK_DATA = {
       "course_code": "CK401",
       "official_url": "https://www.ucc.ie/en/ck401/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2205,7 +2205,7 @@ window.MOCK_DATA = {
       "course_code": "CK411",
       "official_url": "https://www.ucc.ie/en/ck411/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2222,7 +2222,7 @@ window.MOCK_DATA = {
       "course_code": "CKR40",
       "official_url": "https://www.ucc.ie/en/ckr40/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2239,7 +2239,7 @@ window.MOCK_DATA = {
       "course_code": "CKR28",
       "official_url": "https://www.ucc.ie/en/ckr28/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2256,7 +2256,7 @@ window.MOCK_DATA = {
       "course_code": "CKR68",
       "official_url": "https://www.ucc.ie/en/ckr68/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2273,7 +2273,7 @@ window.MOCK_DATA = {
       "course_code": "CK600",
       "official_url": "https://www.ucc.ie/en/ck600/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2290,7 +2290,7 @@ window.MOCK_DATA = {
       "course_code": "CK606",
       "official_url": "https://www.ucc.ie/en/ck606/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2307,7 +2307,7 @@ window.MOCK_DATA = {
       "course_code": "CK701",
       "official_url": "https://www.ucc.ie/en/ck701/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2324,7 +2324,7 @@ window.MOCK_DATA = {
       "course_code": "CK703",
       "official_url": "https://www.ucc.ie/en/ck703/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2341,7 +2341,7 @@ window.MOCK_DATA = {
       "course_code": "CK301",
       "official_url": "https://www.ucc.ie/en/ck301/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2358,7 +2358,7 @@ window.MOCK_DATA = {
       "course_code": "CK201",
       "official_url": "https://www.ucc.ie/en/ck201/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2375,7 +2375,7 @@ window.MOCK_DATA = {
       "course_code": "CKR04",
       "official_url": "https://www.ucc.ie/en/ckr04/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2392,7 +2392,7 @@ window.MOCK_DATA = {
       "course_code": "GY350",
       "official_url": "https://www.universityofgalway.ie/courses/undergraduate-courses/computer-science-and-information-technology.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2409,7 +2409,7 @@ window.MOCK_DATA = {
       "course_code": "GY351",
       "official_url": "https://www.universityofgalway.ie/courses/undergraduate-courses/artificial-intelligence-and-data-analytics.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2426,7 +2426,7 @@ window.MOCK_DATA = {
       "course_code": "1MDS1",
       "official_url": "https://www.universityofgalway.ie/courses/postgraduate-taught-courses/computer-science-data-analytics.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2443,7 +2443,7 @@ window.MOCK_DATA = {
       "course_code": "1MAI1",
       "official_url": "https://www.universityofgalway.ie/courses/postgraduate-taught-courses/artificial-intelligence.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2460,7 +2460,7 @@ window.MOCK_DATA = {
       "course_code": "1MCY1",
       "official_url": "https://www.universityofgalway.ie/courses/postgraduate-taught-courses/cybersecurity.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2477,7 +2477,7 @@ window.MOCK_DATA = {
       "course_code": "GY408",
       "official_url": "https://www.universityofgalway.ie/courses/undergraduate-courses/biomedical-engineering.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2494,7 +2494,7 @@ window.MOCK_DATA = {
       "course_code": "GY501",
       "official_url": "https://www.universityofgalway.ie/courses/undergraduate-courses/medicine.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2511,7 +2511,7 @@ window.MOCK_DATA = {
       "course_code": "GY250",
       "official_url": "https://www.universityofgalway.ie/courses/undergraduate-courses/law.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2528,7 +2528,7 @@ window.MOCK_DATA = {
       "course_code": "GY201",
       "official_url": "https://www.universityofgalway.ie/courses/undergraduate-courses/commerce.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2545,7 +2545,7 @@ window.MOCK_DATA = {
       "course_code": "GY261",
       "official_url": "https://www.universityofgalway.ie/shannoncollege/programmes/bachelor-of-business-studies-in-international-hotel-management/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2562,7 +2562,7 @@ window.MOCK_DATA = {
       "course_code": "MH601",
       "official_url": "https://www.maynoothuniversity.ie/study-maynooth/find-course/bsc-computer-science-and-software-engineering",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2579,7 +2579,7 @@ window.MOCK_DATA = {
       "course_code": "MH603",
       "official_url": "https://www.maynoothuniversity.ie/study-maynooth/find-course/bsc-data-science",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2596,7 +2596,7 @@ window.MOCK_DATA = {
       "course_code": "MHG50",
       "official_url": "https://www.maynoothuniversity.ie/study-maynooth/postgraduate-studies/courses/msc-computer-science-software-engineering",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2613,7 +2613,7 @@ window.MOCK_DATA = {
       "course_code": "MHG68",
       "official_url": "https://www.maynoothuniversity.ie/study-maynooth/postgraduate-studies/courses/msc-computer-science-applied-artificial-intelligence",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2630,7 +2630,7 @@ window.MOCK_DATA = {
       "course_code": "MH304",
       "official_url": "https://www.maynoothuniversity.ie/study-maynooth/find-course/beng-electronic-engineering",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2647,7 +2647,7 @@ window.MOCK_DATA = {
       "course_code": "MH404",
       "official_url": "https://www.maynoothuniversity.ie/study-maynooth/find-course/bachelor-business-studies-business-and-management",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2664,7 +2664,7 @@ window.MOCK_DATA = {
       "course_code": "MH502",
       "official_url": "https://www.maynoothuniversity.ie/study-maynooth/find-course/bcl-law-and-criminology",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2681,7 +2681,7 @@ window.MOCK_DATA = {
       "course_code": "MH001",
       "official_url": "https://www.maynoothuniversity.ie/study-maynooth/find-course/bed-primary-teaching-froebel",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2698,7 +2698,7 @@ window.MOCK_DATA = {
       "course_code": "DC121",
       "official_url": "https://www.dcu.ie/courses/undergraduate/school-computing/computer-applications",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2715,7 +2715,7 @@ window.MOCK_DATA = {
       "course_code": "DC123",
       "official_url": "https://www.dcu.ie/courses/undergraduate/school-computing/data-science",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2732,7 +2732,7 @@ window.MOCK_DATA = {
       "course_code": "DC836",
       "official_url": "https://www.dcu.ie/courses/postgraduate/school-computing/msc-computing",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2749,7 +2749,7 @@ window.MOCK_DATA = {
       "course_code": "DC836-SEC",
       "official_url": "https://www.dcu.ie/courses/postgraduate/school-computing/msc-computing",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2766,7 +2766,7 @@ window.MOCK_DATA = {
       "course_code": "DC190",
       "official_url": "https://www.dcu.ie/courses/undergraduate/school-electronic-engineering/electronic-and-computer-engineering",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2783,7 +2783,7 @@ window.MOCK_DATA = {
       "course_code": "DC111",
       "official_url": "https://www.dcu.ie/courses/undergraduate/dcu-business-school/business-studies",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2800,7 +2800,7 @@ window.MOCK_DATA = {
       "course_code": "DC117",
       "official_url": "https://www.dcu.ie/courses/undergraduate/dcu-business-school/aviation-management-aviation-management-pilot-studies",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2817,7 +2817,7 @@ window.MOCK_DATA = {
       "course_code": "DC002",
       "official_url": "https://www.dcu.ie/courses/undergraduate/institute-education/bachelor-education-primary",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2834,7 +2834,7 @@ window.MOCK_DATA = {
       "course_code": "DC511",
       "official_url": "https://www.dcu.ie/courses/postgraduate/dcu-business-school/msc-finance",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2851,7 +2851,7 @@ window.MOCK_DATA = {
       "course_code": "LM125",
       "official_url": "https://www.ul.ie/courses/lm125",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2868,7 +2868,7 @@ window.MOCK_DATA = {
       "course_code": "LM121",
       "official_url": "https://www.ul.ie/courses/lm121",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2885,7 +2885,7 @@ window.MOCK_DATA = {
       "course_code": "LM121-CYB",
       "official_url": "https://www.ul.ie/courses/bachelor-science-cyber-security-it-forensics",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2902,7 +2902,7 @@ window.MOCK_DATA = {
       "course_code": "LM-MSCAI",
       "official_url": "https://www.ul.ie/gps/course/artificial-intelligence-msc",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2919,7 +2919,7 @@ window.MOCK_DATA = {
       "course_code": "LM116",
       "official_url": "https://www.ul.ie/courses/lm116",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2936,7 +2936,7 @@ window.MOCK_DATA = {
       "course_code": "LM099",
       "official_url": "https://www.ul.ie/courses/lm099",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2953,7 +2953,7 @@ window.MOCK_DATA = {
       "course_code": "LM101",
       "official_url": "https://www.ul.ie/courses/lm101",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2970,7 +2970,7 @@ window.MOCK_DATA = {
       "course_code": "LM050",
       "official_url": "https://www.ul.ie/courses/lm050",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -2987,7 +2987,7 @@ window.MOCK_DATA = {
       "course_code": "RC001",
       "official_url": "https://www.rcsi.com/dublin/undergraduate/medicine",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "€26,000 - €58,500 per year",
       "currency": "EUR (€)"
     },
@@ -3004,7 +3004,7 @@ window.MOCK_DATA = {
       "course_code": "RC101",
       "official_url": "https://www.rcsi.com/dublin/undergraduate/graduate-entry-medicine",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "€26,000 - €58,500 per year",
       "currency": "EUR (€)"
     },
@@ -3021,7 +3021,7 @@ window.MOCK_DATA = {
       "course_code": "RC005",
       "official_url": "https://www.rcsi.com/dublin/undergraduate/pharmacy",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "€26,000 - €58,500 per year",
       "currency": "EUR (€)"
     },
@@ -3038,7 +3038,7 @@ window.MOCK_DATA = {
       "course_code": "RC004",
       "official_url": "https://www.rcsi.com/dublin/undergraduate/physiotherapy",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "€26,000 - €58,500 per year",
       "currency": "EUR (€)"
     },
@@ -3055,7 +3055,7 @@ window.MOCK_DATA = {
       "course_code": "RC-AIM",
       "official_url": "https://www.rcsi.com/dublin/postgraduate/taught-courses/artificial-intelligence-in-medicine",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "€26,000 - €58,500 per year",
       "currency": "EUR (€)"
     },
@@ -3072,7 +3072,7 @@ window.MOCK_DATA = {
       "course_code": "TU856",
       "official_url": "https://www.tudublin.ie/study/undergraduate/courses/computer-science-tu856/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3089,7 +3089,7 @@ window.MOCK_DATA = {
       "course_code": "TU863",
       "official_url": "https://www.tudublin.ie/study/undergraduate/courses/cybersecurity-tu863/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3106,7 +3106,7 @@ window.MOCK_DATA = {
       "course_code": "TU259",
       "official_url": "https://www.tudublin.ie/study/postgraduate/courses/computer-science-data-science-tu259/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3123,7 +3123,7 @@ window.MOCK_DATA = {
       "course_code": "TU260",
       "official_url": "https://www.tudublin.ie/study/postgraduate/courses/applied-artificial-intelligence-tu260/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3140,7 +3140,7 @@ window.MOCK_DATA = {
       "course_code": "TU832",
       "official_url": "https://www.tudublin.ie/study/undergraduate/courses/architecture-tu832/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3157,7 +3157,7 @@ window.MOCK_DATA = {
       "course_code": "TU870",
       "official_url": "https://www.tudublin.ie/study/undergraduate/courses/human-nutrition-and-dietetics-tu870/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3174,7 +3174,7 @@ window.MOCK_DATA = {
       "course_code": "TU901",
       "official_url": "https://www.tudublin.ie/study/undergraduate/courses/business-and-management-tu901/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3191,7 +3191,7 @@ window.MOCK_DATA = {
       "course_code": "MT800",
       "official_url": "https://www.mtu.ie/courses/mt800/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3208,7 +3208,7 @@ window.MOCK_DATA = {
       "course_code": "MT801",
       "official_url": "https://www.mtu.ie/courses/mt801/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3225,7 +3225,7 @@ window.MOCK_DATA = {
       "course_code": "MT-MSCAI",
       "official_url": "https://www.mtu.ie/courses/msc-in-artificial-intelligence/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3242,7 +3242,7 @@ window.MOCK_DATA = {
       "course_code": "MT-MSCCYB",
       "official_url": "https://www.mtu.ie/courses/msc-in-cybersecurity/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3259,7 +3259,7 @@ window.MOCK_DATA = {
       "course_code": "MT766",
       "official_url": "https://www.nmci.ie/nauticalscience",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3276,7 +3276,7 @@ window.MOCK_DATA = {
       "course_code": "US821",
       "official_url": "https://www.tus.ie/courses/us821/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3293,7 +3293,7 @@ window.MOCK_DATA = {
       "course_code": "US823",
       "official_url": "https://www.tus.ie/courses/us823/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3310,7 +3310,7 @@ window.MOCK_DATA = {
       "course_code": "TUS-MSCAI",
       "official_url": "https://www.tus.ie/courses/msc-artificial-intelligence/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3327,7 +3327,7 @@ window.MOCK_DATA = {
       "course_code": "US801",
       "official_url": "https://www.tus.ie/courses/us801/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3344,7 +3344,7 @@ window.MOCK_DATA = {
       "course_code": "AU601",
       "official_url": "https://www.atu.ie/courses/au601",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3361,7 +3361,7 @@ window.MOCK_DATA = {
       "course_code": "AU602",
       "official_url": "https://www.atu.ie/courses/au602",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3378,7 +3378,7 @@ window.MOCK_DATA = {
       "course_code": "ATU-MAI",
       "official_url": "https://www.atu.ie/courses/msc-in-artificial-intelligence",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3395,7 +3395,7 @@ window.MOCK_DATA = {
       "course_code": "AU480",
       "official_url": "https://www.atu.ie/courses/au480",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3412,7 +3412,7 @@ window.MOCK_DATA = {
       "course_code": "AU901",
       "official_url": "https://www.stangelas.ie/programmes/bed-home-economics-biology/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3429,7 +3429,7 @@ window.MOCK_DATA = {
       "course_code": "SE601",
       "official_url": "https://www.setu.ie/courses/se601",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3446,7 +3446,7 @@ window.MOCK_DATA = {
       "course_code": "SE603",
       "official_url": "https://www.setu.ie/courses/se603",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3463,7 +3463,7 @@ window.MOCK_DATA = {
       "course_code": "SETU-MScC",
       "official_url": "https://www.setu.ie/courses/msc-in-computing-enterprise-software-systems",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3480,7 +3480,7 @@ window.MOCK_DATA = {
       "course_code": "SE701",
       "official_url": "https://www.setu.ie/courses/se701",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3497,7 +3497,7 @@ window.MOCK_DATA = {
       "course_code": "DK821",
       "official_url": "https://www.dkit.ie/courses/school-of-informatics-and-creative-arts/computing-science-and-mathematics/bsc-hons-in-computing-in-data-science-and-artificial-intelligence.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3514,7 +3514,7 @@ window.MOCK_DATA = {
       "course_code": "DK822",
       "official_url": "https://www.dkit.ie/courses/school-of-informatics-and-creative-arts/computing-science-and-mathematics/bsc-hons-in-computing-in-cybersecurity-and-computing-infrastructure.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3531,7 +3531,7 @@ window.MOCK_DATA = {
       "course_code": "DK_MDS",
       "official_url": "https://www.dkit.ie/courses/school-of-informatics-and-creative-arts/computing-science-and-mathematics/msc-in-computing-in-medical-device-software-engineering.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3548,7 +3548,7 @@ window.MOCK_DATA = {
       "course_code": "DL836",
       "official_url": "https://www.iadt.ie/courses/creative-computing/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3565,7 +3565,7 @@ window.MOCK_DATA = {
       "course_code": "DL825",
       "official_url": "https://www.iadt.ie/courses/applied-psychology/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3582,7 +3582,7 @@ window.MOCK_DATA = {
       "course_code": "DL843",
       "official_url": "https://www.iadt.ie/courses/film-television-production/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3599,7 +3599,7 @@ window.MOCK_DATA = {
       "course_code": "DL_UXD",
       "official_url": "https://www.iadt.ie/courses/msc-user-experience-design/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3616,7 +3616,7 @@ window.MOCK_DATA = {
       "course_code": "AD101-ID",
       "official_url": "https://www.ncad.ie/study-at-ncad/undergraduate-courses/school-of-design/interaction-design/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3633,7 +3633,7 @@ window.MOCK_DATA = {
       "course_code": "NCAD-MDD",
       "official_url": "https://www.ncad.ie/postgraduate/school-of-design/msc-medical-device-design/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3650,7 +3650,7 @@ window.MOCK_DATA = {
       "course_code": "AD101",
       "official_url": "https://www.ncad.ie/study-at-ncad/undergraduate-courses/school-of-fine-art/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3667,7 +3667,7 @@ window.MOCK_DATA = {
       "course_code": "MI005",
       "official_url": "https://www.mic.ul.ie/study-at-mic/undergraduate/bachelor-of-education",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3684,7 +3684,7 @@ window.MOCK_DATA = {
       "course_code": "MI002",
       "official_url": "https://www.mic.ul.ie/study-at-mic/undergraduate/bachelor-of-arts",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3701,7 +3701,7 @@ window.MOCK_DATA = {
       "course_code": "PME-MIC",
       "official_url": "https://www.mic.ul.ie/study-at-mic/postgraduate/professional-master-of-education-primary",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3718,7 +3718,7 @@ window.MOCK_DATA = {
       "course_code": "CM001",
       "official_url": "https://www.mie.ie/en/study_with_us/undergraduate_programmes/bachelor_in_education/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, August",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3735,7 +3735,7 @@ window.MOCK_DATA = {
       "course_code": "CM010",
       "official_url": "https://www.mie.ie/en/study_with_us/undergraduate_programmes/bsc_in_education_studies/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, August",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3752,7 +3752,7 @@ window.MOCK_DATA = {
       "course_code": "RIAM-BMUS",
       "official_url": "https://www.riam.ie/tertiary-courses/bachelor-in-music-performance",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3769,7 +3769,7 @@ window.MOCK_DATA = {
       "course_code": "RIAM-MMUS",
       "official_url": "https://www.riam.ie/tertiary-courses/master-in-music-performance",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3786,7 +3786,7 @@ window.MOCK_DATA = {
       "course_code": "NC025",
       "official_url": "https://www.ncirl.ie/Courses/Course-Details/course/BSCHDS",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3803,7 +3803,7 @@ window.MOCK_DATA = {
       "course_code": "NC026",
       "official_url": "https://www.ncirl.ie/Courses/Course-Details/course/BSCHCS",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3820,7 +3820,7 @@ window.MOCK_DATA = {
       "course_code": "NC-MSCAI",
       "official_url": "https://www.ncirl.ie/Courses/Course-Details/course/MSCAI",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3837,7 +3837,7 @@ window.MOCK_DATA = {
       "course_code": "NC-MSCDA",
       "official_url": "https://www.ncirl.ie/Courses/Course-Details/course/MSCDA",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3854,7 +3854,7 @@ window.MOCK_DATA = {
       "course_code": "NC-MSCFT",
       "official_url": "https://www.ncirl.ie/Courses/Course-Details/course/MSCFT",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3871,7 +3871,7 @@ window.MOCK_DATA = {
       "course_code": "SPPU-BD",
       "official_url": "https://www.sppu.ie/courses/baccalaureate-in-theology",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3888,7 +3888,7 @@ window.MOCK_DATA = {
       "course_code": "MU001",
       "official_url": "https://www.sppu.ie/courses/ba-in-theology-and-arts",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3905,7 +3905,7 @@ window.MOCK_DATA = {
       "course_code": "SPPU-MAT",
       "official_url": "https://www.sppu.ie/courses/master-of-arts-in-theology",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3922,7 +3922,7 @@ window.MOCK_DATA = {
       "course_code": "IPA-BAPM",
       "official_url": "https://www.ipa.ie/undergraduate/bachelor-of-arts-hons-in-public-management.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3939,7 +3939,7 @@ window.MOCK_DATA = {
       "course_code": "IPA-MPM",
       "official_url": "https://www.ipa.ie/postgraduate/master-of-public-management.html",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -3956,7 +3956,7 @@ window.MOCK_DATA = {
       "course_code": "KI-BL",
       "official_url": "https://www.kingsinns.ie/education/courses/barrister-at-law-degree",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "€13,400 (Degree of Barrister-at-Law)",
       "currency": "EUR (€)"
     },
@@ -3973,7 +3973,7 @@ window.MOCK_DATA = {
       "course_code": "KI-DLS",
       "official_url": "https://www.kingsinns.ie/education/courses/diploma-in-legal-studies",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September",
       "fee": "€13,400 (Degree of Barrister-at-Law)",
       "currency": "EUR (€)"
     },
@@ -3990,7 +3990,7 @@ window.MOCK_DATA = {
       "course_code": "LS-PPC",
       "official_url": "https://www.lawsociety.ie/education--cpd/Law-School/professional-practice-course",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, December",
       "fee": "€10,800 (PPC Solicitor Qualification)",
       "currency": "EUR (€)"
     },
@@ -4007,7 +4007,7 @@ window.MOCK_DATA = {
       "course_code": "LS-LLM",
       "official_url": "https://www.lawsociety.ie/education--cpd/Law-School/Diploma-Centre/llm-advanced-legal-practice",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, December",
       "fee": "€10,800 (PPC Solicitor Qualification)",
       "currency": "EUR (€)"
     },
@@ -4024,7 +4024,7 @@ window.MOCK_DATA = {
       "course_code": "GC400",
       "official_url": "https://www.griffith.ie/find-a-course/bsc-hons-computing-science",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "€12,000 - €15,500 per year",
       "currency": "EUR (€)"
     },
@@ -4041,7 +4041,7 @@ window.MOCK_DATA = {
       "course_code": "GC-MAI",
       "official_url": "https://www.griffith.ie/find-a-course/msc-applied-artificial-intelligence",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "€12,000 - €15,500 per year",
       "currency": "EUR (€)"
     },
@@ -4058,7 +4058,7 @@ window.MOCK_DATA = {
       "course_code": "GC-MBD",
       "official_url": "https://www.griffith.ie/find-a-course/msc-big-data-management-and-analytics",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "€12,000 - €15,500 per year",
       "currency": "EUR (€)"
     },
@@ -4075,7 +4075,7 @@ window.MOCK_DATA = {
       "course_code": "GC-MCYB",
       "official_url": "https://www.griffith.ie/find-a-course/msc-cybersecurity",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "€12,000 - €15,500 per year",
       "currency": "EUR (€)"
     },
@@ -4092,7 +4092,7 @@ window.MOCK_DATA = {
       "course_code": "GC403",
       "official_url": "https://www.griffith.ie/find-a-course/llb-hons-law",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "€12,000 - €15,500 per year",
       "currency": "EUR (€)"
     },
@@ -4109,7 +4109,7 @@ window.MOCK_DATA = {
       "course_code": "DB500",
       "official_url": "https://www.dbs.ie/course/undergraduate/bsc-(hons)-computing-(data-analytics)",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January, April",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4126,7 +4126,7 @@ window.MOCK_DATA = {
       "course_code": "DB-MAI",
       "official_url": "https://www.dbs.ie/course/postgraduate/msc-applied-artificial-intelligence",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January, April",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4143,7 +4143,7 @@ window.MOCK_DATA = {
       "course_code": "DB-MCYB",
       "official_url": "https://www.dbs.ie/course/postgraduate/msc-cybersecurity",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January, April",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4160,7 +4160,7 @@ window.MOCK_DATA = {
       "course_code": "DB-MBA",
       "official_url": "https://www.dbs.ie/course/postgraduate/master-of-business-administration-(mba)",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January, April",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4177,7 +4177,7 @@ window.MOCK_DATA = {
       "course_code": "DB562",
       "official_url": "https://www.dbs.ie/course/undergraduate/ba-(hons)-psychology",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January, April",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4194,7 +4194,7 @@ window.MOCK_DATA = {
       "course_code": "CCT-BAI",
       "official_url": "https://www.cct.ie/courses/bsc-hons-artificial-intelligence/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4211,7 +4211,7 @@ window.MOCK_DATA = {
       "course_code": "CCT-BSD",
       "official_url": "https://www.cct.ie/courses/bsc-hons-software-development/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4228,7 +4228,7 @@ window.MOCK_DATA = {
       "course_code": "CCT-MAI",
       "official_url": "https://www.cct.ie/courses/msc-in-applied-artificial-intelligence/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4245,7 +4245,7 @@ window.MOCK_DATA = {
       "course_code": "CCT-MCYB",
       "official_url": "https://www.cct.ie/courses/msc-in-cybersecurity/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4262,7 +4262,7 @@ window.MOCK_DATA = {
       "course_code": "CCT-MDA",
       "official_url": "https://www.cct.ie/courses/msc-in-data-analytics/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4279,7 +4279,7 @@ window.MOCK_DATA = {
       "course_code": "HC-PMEP",
       "official_url": "https://www.hiberniacollege.com/courses/professional-master-of-education-primary/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January, April",
       "fee": "€8,000 - €10,000 per year",
       "currency": "EUR (€)"
     },
@@ -4296,7 +4296,7 @@ window.MOCK_DATA = {
       "course_code": "HC-PMEPP",
       "official_url": "https://www.hiberniacollege.com/courses/professional-master-of-education-post-primary/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January, April",
       "fee": "€8,000 - €10,000 per year",
       "currency": "EUR (€)"
     },
@@ -4313,7 +4313,7 @@ window.MOCK_DATA = {
       "course_code": "HC-BSCN",
       "official_url": "https://www.hiberniacollege.com/courses/bsc-hons-in-nursing/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January, April",
       "fee": "€8,000 - €10,000 per year",
       "currency": "EUR (€)"
     },
@@ -4330,7 +4330,7 @@ window.MOCK_DATA = {
       "course_code": "SET-BSc",
       "official_url": "https://www.setantacollege.com/courses/bsc-hons-strength-and-conditioning/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February, March, May, October, December",
       "fee": "€6,500 - €10,500 per year",
       "currency": "EUR (€)"
     },
@@ -4347,7 +4347,7 @@ window.MOCK_DATA = {
       "course_code": "SET-MSc",
       "official_url": "https://www.setantacollege.com/courses/msc-performance-coaching/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, February, March, May, October, December",
       "fee": "€6,500 - €10,500 per year",
       "currency": "EUR (€)"
     },
@@ -4364,7 +4364,7 @@ window.MOCK_DATA = {
       "course_code": "IMI-EMBA",
       "official_url": "https://www.imi.ie/programmes/the-imi-executive-mba/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4381,7 +4381,7 @@ window.MOCK_DATA = {
       "course_code": "IMI-MDB",
       "official_url": "https://www.imi.ie/programmes/msc-in-data-business/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4398,7 +4398,7 @@ window.MOCK_DATA = {
       "course_code": "BCA-MFA",
       "official_url": "https://www.burrencollege.ie/programmes/mfa-ma-in-studio-art/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4415,7 +4415,7 @@ window.MOCK_DATA = {
       "course_code": "BCA-MFAE",
       "official_url": "https://www.burrencollege.ie/programmes/mfa-ma-in-art-ecology/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)"
     },
@@ -4432,7 +4432,7 @@ window.MOCK_DATA = {
       "course_code": "T413",
       "official_url": "https://www.ucd.ie/courses/msc-advanced-artificial-intelligence",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)",
       "image_url": "assets/images/courses/msc-advanced-artificial-intelligence.jpg"
@@ -4450,7 +4450,7 @@ window.MOCK_DATA = {
       "course_code": "B746",
       "official_url": "https://www.smurfitschool.ie/programmes/masters/mscinfinancialdatascience/",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)",
       "image_url": "assets/images/courses/msc-financial-data-science.jpg"
@@ -4468,7 +4468,7 @@ window.MOCK_DATA = {
       "course_code": "T387",
       "official_url": "https://www.ucd.ie/courses/msc-statistical-data-science",
       "duration": "N/A",
-      "intake": "September / January",
+      "intake": "September, January",
       "fee": "N/A",
       "currency": "EUR (€)",
       "image_url": "assets/images/courses/msc-statistical-data-science.jpg"

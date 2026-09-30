@@ -227,7 +227,23 @@
               </select>
             </div>
 
-            <!-- 5. Search Button Group -->
+            <!-- 5. Intake -->
+            <div class="search-field-group search-field-intake">
+              <label class="search-field-label" for="hero-intake-select">
+                <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Intake
+              </label>
+              <select id="hero-intake-select" class="search-select">
+                <option value="">Select Intake</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="September">September</option>
+              </select>
+            </div>
+
+            <!-- 6. Search Button Group -->
             <div class="search-field-group search-btn-group">
               <label class="search-field-label search-field-label-invisible">&nbsp;</label>
               <button type="submit" id="hero-search-btn" class="btn-search-main">
@@ -289,6 +305,17 @@
             <option value="UG">Undergraduate (UG)</option>
             <option value="PG">Postgraduate (PG)</option>
             <option value="PhD">PhD / Doctorate</option>
+          </select>
+        </div>
+
+        <!-- Accordion Section: Intake -->
+        <div class="filter-group">
+          <label class="filter-label" for="filter-intake-select">Intake</label>
+          <select id="filter-intake-select" class="filter-select-input">
+            <option value="">Select Intake</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="September">September</option>
           </select>
         </div>
 
@@ -370,6 +397,15 @@
       <div class="filter-group">
         <label class="filter-label">Search Keyword</label>
         <input type="text" id="mobile-search-input" class="filter-search-input" placeholder="Search course or institution...">
+      </div>
+      <div class="filter-group">
+        <label class="filter-label" for="mobile-intake-select">Intake</label>
+        <select id="mobile-intake-select" class="filter-select-input">
+          <option value="">Select Intake</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="September">September</option>
+        </select>
       </div>
       <button class="btn btn-orange" id="mobile-apply-btn" onclick="document.querySelector('#mobile-filter-overlay').click()">Apply Filters</button>
       <button class="btn btn-outline btn-clear-filters">Clear All Filters</button>

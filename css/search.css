@@ -129,7 +129,7 @@
 /* ---- Search Fields Grid ---- */
 .search-fields-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1.15fr 1.15fr 0.95fr;
+  grid-template-columns: 1.35fr 1.05fr 1.05fr 0.85fr 0.85fr;
   gap: 1rem;
   align-items: flex-end;
   width: 100%;

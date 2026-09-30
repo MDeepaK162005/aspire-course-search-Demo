@@ -397,3 +397,104 @@
   z-index: 1100;
 }
 
+/* ==========================================================================
+   UNIVERSITY / INSTITUTION DROPDOWN — Text Alignment & Spacing Fix
+
+   ROOT CAUSE:
+   1. The .combobox-dropdown-list uses display:flex + flex-direction:column.
+      Even with display:block on <li> children, a flex container can still
+      impose flex-item stretching rules that prevent bare text nodes inside
+      <li> elements from wrapping cleanly across all browsers.
+   2. The base .combobox-option-item uses display:flex + align-items:center,
+      which collapses multi-line text into the centre of a fixed min-height
+      row instead of letting the row grow with its wrapped content.
+
+   FIX — Two-layer approach:
+   Layer 1: Switch the institution dropdown <ul> list itself to
+            display:block so its <li> children are pure block boxes and
+            text wrapping is governed by normal block flow (reliable, universal).
+   Layer 2: Override every option <li> to display:block, height:auto,
+            no fixed min-height, with consistent padding and line-height.
+            Position the ✓ checkmark absolutely so it never pushes text.
+   ========================================================================== */
+
+/* --- Layer 1: Institution dropdown list — block layout instead of flex --- */
+/* Hero search card */
+#hero-institution-select + .combobox-wrapper .combobox-dropdown-list,
+/* Desktop sidebar */
+#filter-institution-select + .combobox-wrapper .combobox-dropdown-list {
+  display: none;           /* keep hidden by default — open class below re-shows it         */
+}
+
+#hero-institution-select + .combobox-wrapper.open .combobox-dropdown-list,
+#filter-institution-select + .combobox-wrapper.open .combobox-dropdown-list {
+  display: block;          /* BLOCK layout: <li> children stack via normal flow, not flex   */
+  max-height: 280px;       /* slightly taller for long institution name lists               */
+  overflow-y: auto;        /* vertical scroll stays inside; scrollbar is 5px thin           */
+  padding: 0.35rem 0;      /* breathing room at top and bottom of the list                  */
+  box-sizing: border-box;
+}
+
+/* --- Layer 2: Institution option items — block, wrapping, consistent spacing --- */
+/* Hero search card — institution combobox options */
+#hero-institution-select + .combobox-wrapper .combobox-option-item,
+/* Desktop sidebar — institution combobox options */
+#filter-institution-select + .combobox-wrapper .combobox-option-item {
+  /* Layout */
+  display: block;           /* block: bare text node wraps predictably; no flex distortion  */
+  width: 100%;              /* fill the full dropdown width                                  */
+  box-sizing: border-box;
+
+  /* Sizing — content-driven, never fixed */
+  height: auto;             /* grows with wrapped text; no clamp                            */
+  min-height: 44px;         /* comfortable tap/click target for single-line names           */
+  padding: 0.7rem 2.8rem 0.7rem 1rem;
+  /*           ↑top  ↑right(for ✓) ↑bottom ↑left(text start)                               */
+
+  /* Typography */
+  font-size: 0.875rem;
+  font-family: inherit;
+  line-height: 1.5;         /* 1.5 keeps 2–3-line names comfortable, not cramped            */
+  white-space: normal;      /* allow natural wrapping                                       */
+  overflow-wrap: break-word; /* standard property; prevents any single token overflowing    */
+  word-break: break-word;   /* legacy fallback for older WebKit                             */
+  text-align: left;         /* explicit left-align for all options                          */
+
+  /* Visual */
+  color: var(--color-slate-700);
+  cursor: pointer;
+  transition: background-color 0.12s ease, color 0.12s ease;
+
+  /* Checkmark anchor */
+  position: relative;       /* ::after checkmark positioned relative to this box            */
+}
+
+/* Hover state */
+#hero-institution-select + .combobox-wrapper .combobox-option-item:hover,
+#filter-institution-select + .combobox-wrapper .combobox-option-item:hover {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* Selected state */
+#hero-institution-select + .combobox-wrapper .combobox-option-item.selected,
+#filter-institution-select + .combobox-wrapper .combobox-option-item.selected {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+/* ✓ checkmark — absolute positioned, top-right, never in text flow */
+#hero-institution-select + .combobox-wrapper .combobox-option-item.selected::after,
+#filter-institution-select + .combobox-wrapper .combobox-option-item.selected::after {
+  content: "\2713";         /* ✓ Unicode checkmark                                         */
+  position: absolute;
+  top: 0.72rem;             /* aligns with first line of text                               */
+  right: 0.9rem;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1;
+  pointer-events: none;     /* never blocks click on the option                             */
+}
+

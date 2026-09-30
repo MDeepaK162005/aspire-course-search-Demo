@@ -13,6 +13,7 @@ window.FILTERS = {
     duration: '',
     studyMode: '',
     nfqLevel: '',
+    intake: '',
     sortBy: 'relevance',
     page: 1
   },
@@ -41,6 +42,13 @@ window.FILTERS = {
     if (urlParams.has('duration')) this.currentFilters.duration = urlParams.get('duration');
     if (urlParams.has('studyMode')) this.currentFilters.studyMode = urlParams.get('studyMode');
     if (urlParams.has('nfqLevel')) this.currentFilters.nfqLevel = urlParams.get('nfqLevel');
+    if (urlParams.has('intake')) {
+      // Only accept the three supported intake months; silently ignore any other value
+      const VALID_INTAKES = ['January', 'February', 'September'];
+      const rawIntake = (urlParams.get('intake') || '').trim();
+      const matched = VALID_INTAKES.find(m => m.toLowerCase() === rawIntake.toLowerCase());
+      if (matched) this.currentFilters.intake = matched;
+    }
     if (urlParams.has('sortBy')) this.currentFilters.sortBy = urlParams.get('sortBy');
     if (urlParams.has('page')) this.currentFilters.page = parseInt(urlParams.get('page')) || 1;
   },
@@ -74,6 +82,7 @@ window.FILTERS = {
   sidebarSearchableSub: null,
   heroSearchableLvl: null,
   sidebarSearchableLvl: null,
+  heroSearchableIntake: null,
 
   /**
    * Populate Subject & Institution Select controls dynamically & independently
@@ -256,6 +265,23 @@ window.FILTERS = {
         this.sidebarSearchableInst.setOptions(instOptions);
       }
     }
+
+    // 7. Populate Hero Intake Select with SearchableSelect
+    const heroIntakeSelect = document.querySelector('#hero-intake-select');
+    if (heroIntakeSelect && window.SearchableSelect) {
+      const intakeOptions = [
+        { value: '',          label: 'Select Intake', searchText: 'Select Intake All' },
+        { value: 'January',   label: 'January',       searchText: 'January Intake' },
+        { value: 'February',  label: 'February',      searchText: 'February Intake' },
+        { value: 'September', label: 'September',     searchText: 'September Intake' }
+      ];
+      this.heroSearchableIntake = new window.SearchableSelect(heroIntakeSelect, {
+        placeholder: 'e.g. September, January, February...',
+        defaultLabel: 'Select Intake',
+        onChange: (val) => this.updateFilter('intake', val)
+      });
+      this.heroSearchableIntake.setOptions(intakeOptions);
+    }
   },
 
   /**
@@ -314,6 +340,15 @@ window.FILTERS = {
     // NFQ
     const nfqSelect = document.querySelector('#filter-nfq-select');
     if (nfqSelect) nfqSelect.value = this.currentFilters.nfqLevel;
+
+    // Intake
+    const heroIntake = document.querySelector('#hero-intake-select');
+    if (heroIntake) heroIntake.value = this.currentFilters.intake;
+    if (this.heroSearchableIntake) this.heroSearchableIntake.syncFromSelect();
+    const sidebarIntake = document.querySelector('#filter-intake-select');
+    if (sidebarIntake) sidebarIntake.value = this.currentFilters.intake;
+    const mobileIntake = document.querySelector('#mobile-intake-select');
+    if (mobileIntake) mobileIntake.value = this.currentFilters.intake;
 
     // Sort
     const sortSelect = document.querySelector('#sort-select');
@@ -433,6 +468,30 @@ window.FILTERS = {
       });
     }
 
+    // Hero Intake Select
+    const heroIntakeSelect = document.querySelector('#hero-intake-select');
+    if (heroIntakeSelect) {
+      heroIntakeSelect.addEventListener('change', (e) => {
+        this.updateFilter('intake', e.target.value);
+      });
+    }
+
+    // Sidebar Intake Select
+    const sidebarIntakeSelect = document.querySelector('#filter-intake-select');
+    if (sidebarIntakeSelect) {
+      sidebarIntakeSelect.addEventListener('change', (e) => {
+        this.updateFilter('intake', e.target.value);
+      });
+    }
+
+    // Mobile Intake Select
+    const mobileIntakeSelect = document.querySelector('#mobile-intake-select');
+    if (mobileIntakeSelect) {
+      mobileIntakeSelect.addEventListener('change', (e) => {
+        this.updateFilter('intake', e.target.value);
+      });
+    }
+
     // Clear All Filters Buttons
     document.querySelectorAll('.btn-clear-filters, #sidebar-clear-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -476,6 +535,7 @@ window.FILTERS = {
       duration: '',
       studyMode: '',
       nfqLevel: '',
+      intake: '',
       sortBy: 'relevance',
       page: 1
     };
@@ -488,7 +548,8 @@ window.FILTERS = {
     const searchableInstances = [
       this.heroSearchableInst, this.sidebarSearchableInst,
       this.heroSearchableSub, this.sidebarSearchableSub,
-      this.heroSearchableLvl, this.sidebarSearchableLvl
+      this.heroSearchableLvl, this.sidebarSearchableLvl,
+      this.heroSearchableIntake
     ];
     searchableInstances.forEach(inst => {
       if (inst) {
